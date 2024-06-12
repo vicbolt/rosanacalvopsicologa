@@ -19,5 +19,5 @@ jobs:
         ftp-server: ftp://ftp.tu-servidor.com
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./  # Directorio local a subir
+        local-dir: ./40952253.servicio-online.net
         git-ftp-args: --insecure
