@@ -1,3 +1,3 @@
 export var Global = {
-    url: 'https://www.rosanapsicologa.es/BackEnd/api',
+    url: 'https://www.rosanapsicologa.es/BackEnd',
 }
