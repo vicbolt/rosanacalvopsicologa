@@ -1,3 +1,3 @@
 export var Global = {
-    url: 'http://localhost:4400/api',
+    url: 'http://www.rosanapsicologa.es/BackEnd/api',
 }
