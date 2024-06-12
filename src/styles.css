@@ -191,19 +191,19 @@ section {
   cursor: pointer;
   transform: scale(1.05);
   background-color: white;
-  color: yellow;
+  color: orange;
   border: 1px solid rgba(249, 109, 228, 0.25);
   transition: all 0.3s linear 0.1s;
 }
 .container-button button.second {
   background-color: #ffffff;
-  border: 1px solid yellow;
+  border: 1px solid orange;
 }
 .container-button button.second:hover {
   cursor: pointer;
   transform: scale(1.05);
   background-color: white;
-  color: yellow;
+  color: orange;
   border: 1px solid rgba(249, 109, 228, 0.25);
   transition: all 0.3s linear 0.1s;
 }
