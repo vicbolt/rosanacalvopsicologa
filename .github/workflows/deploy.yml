@@ -1,0 +1,23 @@
+name: Deploy to Hostalia
+
+on:
+  push:
+    branches:
+      - main  # Cambia esto si tu rama principal es diferente
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Deploy to Hostalia via FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        ftp-server: ftp://ftp.tu-servidor.com
+        ftp-username: ${{ secrets.FTP_USERNAME }}
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./  # Directorio local a subir
+        git-ftp-args: --insecure
