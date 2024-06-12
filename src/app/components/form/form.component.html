@@ -1,0 +1,217 @@
+<section class="form">
+  <div class="wrap">
+    <div class="title-container">
+      <h4>FORMULARIO</h4>
+      <h2>Rellena este breve formulario para resolver tus dudas</h2>
+    </div>
+
+    <div class="container">
+      <div class="leftside">
+        <form (ngSubmit)="onSubmit()" #mensajeForm="ngForm">
+          <div class="input-container" *ngIf="inputContainer1 == true">
+            <h4>¿Cual es tu nombre?</h4>
+            <input
+              placeholder="Escribe aquí tu nombre"
+              type="text"
+              name="name"
+              #name="ngModel"
+              [(ngModel)]="mensaje.name"
+              (keyup.enter)="nextQuestionForm1()"
+            />
+            <div>
+              <div></div>
+              <h3 (click)="nextQuestionForm1()" *ngIf="mensaje.name">
+                Continuar &rarr;
+              </h3>
+            </div>
+          </div>
+
+          <div class="input-container" *ngIf="inputContainer2 == true">
+            <h4>¿Cual es tu correo electrónico?</h4>
+            <h4>
+              Revisa que esté correctamente escrito, te llegará la respuesta a
+              ese email
+            </h4>
+            <input
+              placeholder="Ejemplo: rosana@gmail.com"
+              type="text"
+              name="name"
+              #name="ngModel"
+              [(ngModel)]="mensaje.email"
+              (keyup.enter)="nextQuestionForm2()"
+            />
+            <div>
+              <h3 (click)="previousQuestionForm2()">&larr; Anterior</h3>
+              <h3 (click)="nextQuestionForm2()" *ngIf="mensaje.email">
+                Continuar &rarr;
+              </h3>
+            </div>
+          </div>
+
+          <div class="input-container" *ngIf="inputContainer3 == true">
+            <h4>¿Qué medio de comunicación prefieres?</h4>
+            <div class="radios">
+              <input
+                type="radio"
+                value="Email"
+                name="comPreference"
+                id="email"
+                #name="ngModel"
+                [(ngModel)]="mensaje.comPreference"
+              />
+              <label for="email">Email</label>
+
+              <input
+                type="radio"
+                value="Llamada telefónica"
+                id="phone"
+                name="comPreference"
+                #name="ngModel"
+                [(ngModel)]="mensaje.comPreference"
+              />
+              <label for="phone">Llamada telefónica</label>
+
+              <input
+                type="radio"
+                value="Whatsapp"
+                id="whatsapp"
+                name="comPreference"
+                #name="ngModel"
+                [(ngModel)]="mensaje.comPreference"
+              />
+              <label for="whatsapp">Whatsapp</label>
+            </div>
+
+            <div>
+              <h3 (click)="previousQuestionForm3()">&larr; Anterior</h3>
+              <h3 *ngIf="mensaje.comPreference" (click)="handleClick()" >
+                Continuar &rarr;
+              </h3>
+            </div>
+          </div>
+
+          <div class="input-container" *ngIf="inputContainer4">
+            <h4>¿En que franja horaria prefieres que te contacte?</h4>
+            <div class="radios">
+              <input
+                type="radio"
+                value="Mañana (9-12h)"
+                name="time"
+                id="manana"
+                #name="ngModel"
+                [(ngModel)]="mensaje.time"
+              />
+              <label for="manana">Mañana (9-12h)</label>
+
+              <input
+                type="radio"
+                value="Mediodía (12-16h)"
+                id="mediodia"
+                name="time"
+                #name="ngModel"
+                [(ngModel)]="mensaje.time"
+              />
+              <label for="mediodia">Mediodía (12-16h)</label>
+
+              <input
+                type="radio"
+                value="Tarde (16-20h)"
+                id="tarde"
+                name="time"
+                #name="ngModel"
+                [(ngModel)]="mensaje.time"
+              />
+              <label for="tarde">Tarde (16-20h)</label>
+            </div>
+
+            <div>
+              <h3 (click)="previousQuestionForm4()">&larr; Anterior</h3>
+              <h3 (click)="nextQuestionForm4()" *ngIf="mensaje.time">
+                Continuar &rarr;
+              </h3>
+            </div>
+          </div>
+
+          <div class="input-container" *ngIf="inputContainer5">
+            <h4>¿Cual es tu teléfono?</h4>
+            <input
+              placeholder="Ej: 662 662 622"
+              type="text"
+              name="phone"
+              #name="ngModel"
+              [(ngModel)]="mensaje.phone"
+              (keyup.enter)="nextQuestionForm5()"
+            />
+            <div>
+              <h3 (click)="previousQuestionForm5()">&larr; Anterior</h3>
+              <h3 (click)="nextQuestionForm5()" *ngIf="mensaje.phone">
+                Continuar &rarr;
+              </h3>
+            </div>
+          </div>
+
+          <div class="input-container" *ngIf="inputContainer6 == true">
+            <h4>Escribe sobre tus preguntas o dudas</h4>
+            <textarea
+              name="msg"
+              rows="6"
+              #name="ngModel"
+              [(ngModel)]="mensaje.msg"
+            ></textarea>
+            <div>
+              <h3 (click)="previousQuestionForm6()">&larr; Anterior</h3>
+              <h3 (click)="nextQuestionForm6()" *ngIf="mensaje.msg">
+                Continuar &rarr;
+              </h3>
+            </div>
+          </div>
+
+          <div class="input-containerFinal" *ngIf="inputContainerFinal == true">
+            <div class="emergente">
+              <h4>
+                Revisa que todos los campos sean correctos anter de enviar el
+                formulario.
+              </h4>
+              <p>
+                Nombre: <span>{{ mensaje.name }}</span>
+              </p>
+              <p>Email: <span>{{ mensaje.email }}</span></p>
+              <p>Preferencia de respuesta: <span>{{ mensaje.comPreference }} </span></p>
+              <p>Franja horaria: <span>{{ mensaje.time }} </span></p>
+
+              <p>Teléfono: <span>{{ mensaje.phone }}</span></p>
+              <p>Mensaje: </p>
+              <p><span>{{ mensaje.msg }}</span></p>
+              <hr>
+              <div class="btns">
+                <h3 (click)="previousQuestionFormFinal()">Volver al formulario</h3>
+                <button type="submit">Enviar formulario</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="rightside" *ngIf="mensaje.name">
+        <p *ngIf="mensaje.name">
+          Nombre: <span>{{ mensaje.name }}</span>
+        </p>
+        <p *ngIf="mensaje.email">
+          Email: <span>{{ mensaje.email }}</span>
+        </p>
+        <p *ngIf="mensaje.comPreference">
+          Preferencia de respuesta: <span>{{ mensaje.comPreference }}</span>
+        </p>
+        <p *ngIf="mensaje.time">
+          Franja horaria: <span>{{ mensaje.time }}</span>
+        </p>
+        <p *ngIf="mensaje.phone">
+          Teléfono: <span>{{ mensaje.phone }}</span>
+        </p>
+        <p *ngIf="mensaje.msg">
+          Mensaje: <span>{{ mensaje.msg }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

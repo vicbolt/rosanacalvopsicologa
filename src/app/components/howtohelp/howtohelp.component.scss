@@ -1,0 +1,61 @@
+@import "../../../styles";
+
+#howtohelp {
+  background-color: white;
+  margin-top: 4rem;
+
+  & .full-container {
+    width: 70%;
+    margin: auto;
+
+    & h3 {
+      font-family: $font-special !important;
+      color: $color-2;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    & .cards-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      & img {
+        width: 9%;
+        margin-bottom: 2.2rem;
+      }
+
+      & .card {
+        width: 60%;
+        border-radius: 16px;
+        background-color: $color-3-opa25;
+        padding: 3rem;
+        margin: 1rem 0 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          transform: scale(1.02);
+          transition: all 1s linear 0.1s;
+        }
+
+        & h4 {
+          font-size: 1.7rem;
+          font-weight: 600;
+          color: $color-2;
+        }
+
+        & p {
+          padding: 2rem;
+          text-align: center;
+          font-size: 1rem;
+          line-height: 2rem;
+          color: $color-2;
+        }
+      }
+    }
+  }
+}

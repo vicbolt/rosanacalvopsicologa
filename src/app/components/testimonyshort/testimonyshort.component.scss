@@ -1,0 +1,46 @@
+@import "../../../styles";
+
+#testimonyshort {
+  background-color: $color-3-opa25;
+  margin-top: 2rem;
+
+  & .full-container {
+    padding-top: 2rem;
+    width: 70%;
+    margin: auto;
+
+    & .container-flex {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+      & .box {
+        width: 25%;
+        background-color: white;
+        border-radius: 8px;
+        padding: 2rem;
+
+        & h4 {
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: $color-1;
+          margin-bottom: 0.7rem;
+        }
+
+        & h5 {
+          font-size: 1rem;
+          font-style: italic;
+          margin-bottom: 1rem;
+          color: $color-2;
+        }
+
+        & p {
+          font-size: 0.8rem;
+          line-height: 1.6rem;
+          color: $color-2;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

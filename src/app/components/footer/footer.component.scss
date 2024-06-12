@@ -1,0 +1,67 @@
+@import "../../../styles";
+
+.container{
+    width: 100%;
+    height: auto;
+    background-color: $color-1-opa25;
+
+
+    & .container-full{
+        padding: 2rem;
+        .footer{
+            &__line1{
+                display: flex;
+                justify-content: space-between;
+                height: 4rem;
+
+                &-leftside{
+                    width: 30%;
+                    display: flex;
+                    align-items: center;
+                }
+
+                &-rightside{
+                    width: 68%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: .8rem;
+
+                    & a{
+                        &:hover{
+                            font-weight: 500;
+                            color: $color-1;
+                        }
+                    }
+                }
+            }
+
+            &__line2{
+              &-contact{
+                  & p{
+                      margin-bottom: .5rem;
+                      font-size: .8rem;
+                  }
+              }
+            }
+
+            &__line3{
+                text-align: center;
+                margin-bottom: 1rem;
+                font-size: .7rem;
+
+                & span{
+                    font-style: italic;
+                }
+            }
+
+            &__line4{
+                display: flex;
+                justify-content: center;
+            }
+
+          }
+
+    }
+
+}

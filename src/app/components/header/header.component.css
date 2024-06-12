@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: unset;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wrap {
+  width: 75%;
+  margin: auto;
+}
+
+section {
+  min-height: 80vh;
+}
+
+.title-container {
+  border-bottom: 1px solid rgb(249, 109, 228);
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+.title-container h4 {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #575757;
+  text-transform: uppercase;
+}
+.title-container h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.7rem 0 0.7rem 0;
+  color: #575757;
+}
+
+.container-button {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+.container-button.center {
+  justify-content: center;
+}
+.container-button button {
+  width: 50%;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.container-button button.main {
+  background-color: #575757;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+.container-button button.main:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: white;
+  color: rgb(249, 109, 228);
+  border: 1px solid rgba(249, 109, 228, 0.25);
+  transition: all 0.3s linear 0.1s;
+}
+.container-button button.second {
+  background-color: #ffffff;
+  border: 1px solid rgb(249, 109, 228);
+}
+.container-button button.second:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: white;
+  color: rgb(249, 109, 228);
+  border: 1px solid rgba(249, 109, 228, 0.25);
+  transition: all 0.3s linear 0.1s;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+#menu-nav {
+  width: 100%;
+  height: 12vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+#menu-nav .full-container {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+#menu-nav .full-container .subcontainer-info {
+  background: white;
+  padding: 1rem;
+  flex-direction: column;
+  position: absolute;
+  border-radius: 0 0 8px 8px;
+  width: 90% !important;
+  margin-top: 0.1rem;
+}
+#menu-nav .full-container .subcontainer-info h4 {
+  color: #575757;
+  text-decoration: none;
+  padding: 0.1rem;
+  font-size: 0.8rem !important;
+  width: 100% !important;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+}
+#menu-nav .full-container .subcontainer-info h4:hover {
+  color: rgb(140, 180, 0);
+}
+#menu-nav .full-container .container-leftside {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#menu-nav .full-container .container-leftside .logotype-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+#menu-nav .full-container .container-leftside .logotype-container img {
+  width: 20%;
+}
+#menu-nav .full-container .container-leftside .logotype-container .isologo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+#menu-nav .full-container .container-leftside .logotype-container .isologo img {
+  width: 60%;
+  margin-left: 1.2rem;
+}
+#menu-nav .full-container .container-leftside .logotype-container .isologo p {
+  display: flex;
+  justify-content: center;
+  margin-left: 2.7rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+#menu-nav .full-container .container-rightside {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#menu-nav .full-container .container-rightside a,
+#menu-nav .full-container .container-rightside div {
+  width: 25%;
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+#menu-nav .full-container .container-rightside a:hover,
+#menu-nav .full-container .container-rightside div:hover {
+  transform: scale(1.1);
+  color: rgb(140, 180, 0);
+}
+#menu-nav .full-container .container-rightside a.active,
+#menu-nav .full-container .container-rightside div.active {
+  color: rgb(140, 180, 0);
+  font-weight: 600;
+}

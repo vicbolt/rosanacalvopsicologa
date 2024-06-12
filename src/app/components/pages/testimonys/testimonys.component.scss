@@ -1,0 +1,43 @@
+@import "../../../../styles.scss";
+
+.container{
+    margin-top: 12vh;
+    background-color: $color-1-opa15;
+    padding-top: 2rem;
+
+    &__box{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        
+
+        & .box{
+            width: 25%;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            margin-left: 2rem;
+
+            & .name{
+                color: $color-1;
+                font-weight: 600;
+                font-size: 1.2rem;
+                margin-bottom: .5rem;
+            }
+
+            & .case{
+                font-style: italic;
+                color: $color-2;
+                margin-bottom: 1rem;
+                font-size: .8rem;
+            }
+
+            & .msg{
+                font-size: .9rem;
+                line-height: normal;
+                text-align: justify;
+            }
+        }
+    }
+}

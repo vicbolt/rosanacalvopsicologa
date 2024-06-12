@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="wrap">
+        <h2>¡Tu mensaje ha sido enviado!</h2>
+        <h3>!Enhorabuena {{ name }}! Estas un paso más cerca de comenzar tu camino hacia el bienestar</h3>
+        <h4>Contactaré contigo por {{ comPreference }} <span *ngIf="time"> durante la {{time}}</span> lo antes posible. </h4>
+
+        <a [routerLink]="['/home']">Volver</a>
+
+    </div>
+</div>

@@ -1,0 +1,75 @@
+@import "../../../../styles.scss";
+
+.container{
+    margin-top: 10rem;
+
+    & .container-set1{
+        display: flex;
+        justify-content: space-between;
+
+        & .leftside{
+            width: 50%;
+            & p {
+                line-height: 1.3rem;
+                margin-bottom: 1rem;
+                text-align: justify;
+                font-size: .9rem;
+    
+                & span{
+                    color: $color-1;
+                }
+            }
+        }
+
+        & .rightside{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            
+        }
+    }
+
+    & .container-set2{
+        display: flex;
+        justify-content: space-between;
+
+        & .leftside{
+            width: 0;
+        }
+
+        & .rightside{
+            width: 100%;
+
+            & p{
+                line-height: 1.3rem;
+                margin-bottom: 1rem;
+                text-align: justify;
+                font-size: .9rem;
+
+
+                & span{
+                    color: $color-1
+                }
+            }
+        }
+    }
+
+    & .container-set3{
+        padding-bottom: 3rem;
+        & ol{
+            border: 1px solid $color-1;
+            padding: 1rem;
+            border-radius: 8px;
+
+            & li{
+                font-size: .9rem;
+                margin-bottom: 1rem;
+
+                & span{
+                    font-weight: 500;
+                    color: $color-1;
+                }
+            }
+        }
+    }
+}

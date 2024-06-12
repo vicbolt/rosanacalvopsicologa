@@ -1,0 +1,30 @@
+<div id="menu-nav">
+    <div class="full-container">
+        <div class="container-leftside">
+            <a class="logotype-container" [routerLink]="['/home']" >
+                <img src="assets/img/pics/loto_flower4.png" alt="Logotipo" >
+                <div class="isologo" [ngStyle]="{'display': 'flex', 'flex-direction' : 'column'}"> 
+                    <img src="assets/img/logos/main-logo.png" alt="Logotipo" >
+                    <p>Psicóloga especialista en terapia EMDR</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="container-rightside">
+            <a [routerLink]="['/home']" [routerLinkActive]="['active']">Inicio</a>
+            <div id="info-btn" (mouseenter)="showSubcontainer()" (mouseleave)="hideSubcontainer()">
+                <a>Información</a>
+
+                <div id="subcontainerInfo" class="subcontainer-info" [routerLinkActive]="['active']" *ngIf="subcontainer == true">
+                    <h4 [routerLink]="['/aboutme']">Sobre mí</h4>
+                    <h4 [routerLink]="['/EMDRinfo']">¿Que es la terapia EMDR?</h4>
+                    <h4 [routerLink]="['/testimonys']">Opiniones</h4>
+
+                </div>
+            </div>
+            <a [routerLink]="['/services']" [routerLinkActive]="['active']">Servicios</a>
+            <a [routerLink]="['/contactme']" [routerLinkActive]="['active']">Contacto</a>
+        </div>
+
+    </div>
+</div>

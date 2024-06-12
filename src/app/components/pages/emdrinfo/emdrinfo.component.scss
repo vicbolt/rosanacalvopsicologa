@@ -1,0 +1,69 @@
+@import "../../../../styles.scss";
+
+
+#infoEmdr{
+    flex-direction: column;
+    margin-top: 7rem;
+    width: 100%;
+    background-image: url('../../../../assets/img/icons/gradient-balls4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    & .full-container{
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+        width: 70%;
+        margin: auto;
+        justify-content: space-between;
+        display: flex;
+
+
+        & .container-leftside{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & h2{
+                font-size: 1.6rem;
+                font-weight: 500;
+                font-family: $font-text;
+                color: $color-2;
+                margin-bottom: 1rem;
+            }
+        }
+
+        & .container-rightside{
+            width: 50%;
+
+            & p{
+                font-family: $font-text;
+                font-size: .9rem;
+                margin-bottom: 1rem;
+                text-align: justify;
+                line-height: 1.6rem;
+
+                & span{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    & .full-container2{
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+        width: 70%;
+        margin: auto;
+
+        & p{
+            font-size: .9rem;
+            margin-bottom: 1rem;
+            text-align: justify;
+            line-height: 1.6rem;
+            & span{
+                font-weight: 600;
+            }
+        }
+    }
+}

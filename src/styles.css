@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: unset;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wrap {
+  width: 75%;
+  margin: auto;
+}
+
+section {
+  min-height: 80vh;
+}
+
+.title-container {
+  border-left: 1.5rem solid rgba(140, 180, 0, 0.25);
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+.title-container h4 {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #575757;
+  text-transform: uppercase;
+}
+.title-container h2 {
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.7rem 0 0.7rem 0;
+  color: #575757;
+}
+
+.container-button {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+.container-button.center {
+  justify-content: center;
+}
+.container-button button {
+  width: 50%;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.container-button button.main {
+  background-color: #575757;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+.container-button button.main:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: white;
+  color: rgb(249, 109, 228);
+  border: 1px solid rgba(249, 109, 228, 0.25);
+  transition: all 0.3s linear 0.1s;
+}
+.container-button button.second {
+  background-color: #ffffff;
+  border: 1px solid rgb(249, 109, 228);
+}
+.container-button button.second:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: white;
+  color: rgb(249, 109, 228);
+  border: 1px solid rgba(249, 109, 228, 0.25);
+  transition: all 0.3s linear 0.1s;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}

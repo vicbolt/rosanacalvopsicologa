@@ -1,0 +1,65 @@
+@import "../../../../styles";
+
+.container {
+  margin-top: 18vh;
+  background-color: white;
+
+  & .wrap {
+    & .container-cards {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & .card {
+        width: 40%;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 16px;
+        border: 1px solid $color-1;
+
+        & h2 {
+          text-align: center;
+          font-weight: 600;
+          font-size: 1.5rem;
+          margin-bottom: 2rem;
+        }
+
+        & p {
+          text-align: center;
+          margin-bottom: 0.5rem;
+
+          &.add-info {
+            font-style: italic;
+            margin-bottom: 3rem;
+          }
+        }
+
+        & span {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          color: $color-1;
+          font-weight: 500;
+          font-size: 3.5rem;
+          margin-bottom: 1rem;
+        }
+
+        & .btn-container {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          & button {
+            width: 80%;
+            padding: 1rem;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 20px;
+            background-color: $color-1-opa25;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}

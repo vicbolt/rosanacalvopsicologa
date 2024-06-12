@@ -1,0 +1,37 @@
+@import "../../../styles";
+
+#aboutmeshort {
+  background-color: white;
+  & .full-container {
+    padding-top: 2rem;
+    width: 70%;
+    margin: auto;
+
+    & .container-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    & .container-leftside {
+      width: 48%;
+      font-size: 1rem;
+      line-height: 2rem;
+      text-align: justify;
+
+      & p {
+        font-family: $font-text;
+      }
+    }
+
+    & .container-rightside {
+      width: 48%;
+      display: flex;
+      justify-content: end;
+
+      & img {
+        width: 60%;
+      }
+    }
+  }
+}

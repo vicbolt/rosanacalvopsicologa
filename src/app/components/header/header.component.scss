@@ -1,0 +1,111 @@
+@import "../../../styles";
+
+#menu-nav {
+  width: 100%;
+  height: 12vh;
+  background-color: white;
+  // box-shadow: 0px 11px 24px $color-3-opa25;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+
+  & .full-container {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    & .subcontainer-info {
+      background: white;
+      padding: 1rem;
+      flex-direction: column;
+      position: absolute;
+      border-radius: 0 0 8px 8px;
+      width: 90% !important;
+      margin-top: .1rem;
+
+      & h4 {
+        color: $color-2;
+        text-decoration: none;
+        padding: 0.1rem;
+        font-size: 0.8rem !important;
+        width: 100% !important;
+        margin-bottom: 0.6rem;
+        cursor: pointer;
+
+        &:hover {
+          color: $color-3;
+        }
+      }
+    }
+
+    & .container-leftside {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      & .logotype-container {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+
+        & img {
+          width: 20%;
+        }
+
+        & .isologo {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: start;
+
+          & img {
+            width: 60%;
+            margin-left: 1.2rem;
+          }
+
+          & p {
+            display: flex;
+            justify-content: center;
+            margin-left: 2.7rem;
+            font-family: $font-text;
+            font-size: 0.7rem;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    & .container-rightside {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      & a,
+      div {
+        width: 25%;
+        color: black;
+        font-size: 1rem;
+        text-decoration: none;
+        font-family: $font-text;
+        text-align: center;
+
+        &:hover {
+          transform: scale(1.1);
+          color: $color-3;
+        }
+
+        &.active {
+          color: $color-3;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
