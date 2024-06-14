@@ -7,7 +7,7 @@
 
     <div class="container">
       <div class="leftside">
-        <form (ngSubmit)="onSubmit()" #mensajeForm="ngForm" action="https://back-psico-ro2ota0gt-victor-fernandezs-projects-5866bbd1.vercel.app/api/saveMsg" method="post">
+        <form (ngSubmit)="onSubmit()" #mensajeForm="ngForm" >
           <div class="input-container" *ngIf="inputContainer1 == true">
             <h4>¿Cual es tu nombre?</h4>
             <input
