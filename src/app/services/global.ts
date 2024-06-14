@@ -1,3 +1,3 @@
 export var Global = {
-    url: 'https://www.rosanapsicologa.es/back/',
+    url: 'back-psico-ro2ota0gt-victor-fernandezs-projects-5866bbd1.vercel.app',
 }
