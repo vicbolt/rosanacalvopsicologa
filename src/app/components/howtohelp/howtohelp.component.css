@@ -232,7 +232,6 @@ html {
   margin-bottom: 2.2rem;
 }
 #howtohelp .full-container .cards-container .card {
-  opacity: 0;
   width: 60%;
   border-radius: 16px;
   background-color: rgba(140, 180, 0, 0.25);
