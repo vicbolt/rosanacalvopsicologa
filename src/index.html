@@ -22,9 +22,28 @@
 <script>
   window.onscroll = function () {
     var y = window.scrollY;
+    console.log(y)
 
     if (y > 492) {
       element = document.getElementById("card1");
+      element.style.transition = "opacity 2s";
+      element.style.opacity = 1;
+    }
+
+    if (y > 692) {
+      element = document.getElementById("card2");
+      element.style.transition = "opacity 2s";
+      element.style.opacity = 1;
+    }
+
+    if (y > 892) {
+      element = document.getElementById("card3");
+      element.style.transition = "opacity 2s";
+      element.style.opacity = 1;
+    }
+
+    if (y > 1000) {
+      element = document.getElementById("card4");
       element.style.transition = "opacity 2s";
       element.style.opacity = 1;
     }
