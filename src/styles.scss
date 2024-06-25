@@ -137,15 +137,17 @@ section {
   min-height: 80vh;
 }
 
-$color-1: purple;
-$color-1-opa50: rgba(249, 109, 228, 0.5);
-$color-1-opa25: rgba(249, 109, 228, 0.25);
-$color-1-opa15: rgba(249, 109, 228, 0.15);
+$color-1: rgb(202, 84, 233);
+$color-1-opa50: rgba(202, 84, 233, 0.5);
+$color-1-opa25: rgba(202, 84, 233, 0.25);
+$color-1-opa15: rgba(202, 84, 233, 0.15);
 
 $color-2: #575757;
 $color-3: rgb(140, 180, 0);
 $color-3-opa50: rgb(140, 180, 0, 0.5);
 $color-3-opa25: rgb(140, 180, 0, 0.25);
+$color-3-opa15: rgb(140, 180, 0, 0.15);
+
 
 $color-4: #ffffff;
 
@@ -154,9 +156,17 @@ $font-text: "Poppins", sans-serif;
 $font-special: "Poppins", sans-serif;
 
 .title-container {
-  border-left: 1.5rem solid $color-3-opa25;
   margin-bottom: 2rem;
   margin-top: 4rem;
+
+  &.green{
+    border-left: 1.5rem solid $color-3-opa25;
+  }
+
+  &.pink{
+    border-left: 1.5rem solid $color-1-opa25;
+  }
+
   & h4 {
     margin-top: 2rem;
     margin-left: 1rem;
@@ -211,6 +221,20 @@ $font-special: "Poppins", sans-serif;
 
     &.second {
       background-color: $color-4;
+      border: 1px solid $color-1;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        background-color: white;
+        color: $color-1;
+        border: 1px solid $color-1-opa25;
+        transition: all 0.3s linear 0.1s;
+      }
+    }
+
+    &.pink{
+      background-color: $color-1-opa25;
       border: 1px solid $color-1;
 
       &:hover {

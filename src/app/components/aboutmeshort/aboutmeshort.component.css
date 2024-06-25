@@ -202,6 +202,18 @@ section {
   border: 1px solid rgba(249, 109, 228, 0.25);
   transition: all 0.3s linear 0.1s;
 }
+.container-button button.pink {
+  background-color: rgba(249, 109, 228, 0.25);
+  border: 1px solid purple;
+}
+.container-button button.pink:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: white;
+  color: purple;
+  border: 1px solid rgba(249, 109, 228, 0.25);
+  transition: all 0.3s linear 0.1s;
+}
 
 html {
   font-family: "Poppins", sans-serif;
@@ -228,12 +240,13 @@ html {
 }
 #aboutmeshort .full-container .container-leftside p {
   font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
 }
 #aboutmeshort .full-container .container-rightside {
-  width: 48%;
+  width: 50%;
   display: flex;
   justify-content: end;
 }
 #aboutmeshort .full-container .container-rightside img {
-  width: 60%;
+  width: 75%;
 }
