@@ -17,17 +17,18 @@
   async
   defer
   type="text/javascript"
-
 ></script>
 
 <script>
-  
-  window.onscroll = function() {
+  window.onscroll = function () {
     var y = window.scrollY;
 
-    if (y > 492){
-      element = document.getElementById('card1');
-      element.style.transition ='opacity(1)';
+    if (y > 492) {
+      element = document.getElementById("card1");
+      window.setTimeout(function () {
+        element.style.display = "flex";
+        element.style.opacity = "1";
+      }, 2000);
     }
-  }
+  };
 </script>
