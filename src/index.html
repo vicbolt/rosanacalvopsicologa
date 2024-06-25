@@ -24,14 +24,10 @@
   
   window.onscroll = function() {
     var y = window.scrollY;
-    // console.log(y);
 
     if (y > 492){
-  
-      // console.log('hola')
-
-      console.log(document.getElementById('card1'))
-      document.getElementById('card1').style.opacity = 1;
+      element = document.getElementById('card1');
+      element.style.transform.opacity = 1;
     }
   }
 </script>
