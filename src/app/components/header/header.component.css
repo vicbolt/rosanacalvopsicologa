@@ -141,9 +141,14 @@ section {
 }
 
 .title-container {
-  border-left: 1.5rem solid rgba(140, 180, 0, 0.25);
   margin-bottom: 2rem;
   margin-top: 4rem;
+}
+.title-container.green {
+  border-left: 1.5rem solid rgba(140, 180, 0, 0.25);
+}
+.title-container.pink {
+  border-left: 1.5rem solid rgba(202, 84, 233, 0.25);
 }
 .title-container h4 {
   margin-top: 2rem;
@@ -186,32 +191,44 @@ section {
   cursor: pointer;
   transform: scale(1.05);
   background-color: white;
-  color: purple;
-  border: 1px solid rgba(249, 109, 228, 0.25);
+  color: rgb(202, 84, 233);
+  border: 1px solid rgba(202, 84, 233, 0.25);
   transition: all 0.3s linear 0.1s;
 }
 .container-button button.second {
   background-color: #ffffff;
-  border: 1px solid purple;
+  border: 1px solid rgb(202, 84, 233);
 }
 .container-button button.second:hover {
   cursor: pointer;
   transform: scale(1.05);
   background-color: white;
-  color: purple;
-  border: 1px solid rgba(249, 109, 228, 0.25);
+  color: rgb(202, 84, 233);
+  border: 1px solid rgba(202, 84, 233, 0.25);
   transition: all 0.3s linear 0.1s;
 }
 .container-button button.pink {
-  background-color: rgba(249, 109, 228, 0.25);
-  border: 1px solid purple;
+  background-color: rgba(202, 84, 233, 0.25);
+  border: none;
 }
 .container-button button.pink:hover {
   cursor: pointer;
   transform: scale(1.05);
   background-color: white;
-  color: purple;
-  border: 1px solid rgba(249, 109, 228, 0.25);
+  color: rgb(202, 84, 233);
+  border: none;
+  transition: all 0.3s linear 0.1s;
+}
+.container-button button.green {
+  background-color: rgba(140, 180, 0, 0.25);
+  border: none;
+}
+.container-button button.green:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: white;
+  color: rgb(140, 180, 0);
+  border: none;
   transition: all 0.3s linear 0.1s;
 }
 

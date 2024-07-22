@@ -235,14 +235,28 @@ $font-special: "Poppins", sans-serif;
 
     &.pink{
       background-color: $color-1-opa25;
-      border: 1px solid $color-1;
+      border: none;
 
       &:hover {
         cursor: pointer;
         transform: scale(1.05);
         background-color: white;
         color: $color-1;
-        border: 1px solid $color-1-opa25;
+        border: none;
+        transition: all 0.3s linear 0.1s;
+      }
+    }
+
+    &.green{
+      background-color: $color-3-opa25;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        background-color: white;
+        color: $color-3;
+        border: none;
         transition: all 0.3s linear 0.1s;
       }
     }

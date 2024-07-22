@@ -209,14 +209,26 @@ section {
 }
 .container-button button.pink {
   background-color: rgba(202, 84, 233, 0.25);
-  border: 1px solid rgb(202, 84, 233);
+  border: none;
 }
 .container-button button.pink:hover {
   cursor: pointer;
   transform: scale(1.05);
   background-color: white;
   color: rgb(202, 84, 233);
-  border: 1px solid rgba(202, 84, 233, 0.25);
+  border: none;
+  transition: all 0.3s linear 0.1s;
+}
+.container-button button.green {
+  background-color: rgba(140, 180, 0, 0.25);
+  border: none;
+}
+.container-button button.green:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: white;
+  color: rgb(140, 180, 0);
+  border: none;
   transition: all 0.3s linear 0.1s;
 }
 
@@ -230,6 +242,7 @@ html {
 .container .container-set1 {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 .container .container-set1 .leftside {
   width: 50%;
