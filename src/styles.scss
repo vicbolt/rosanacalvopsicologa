@@ -104,10 +104,7 @@ nav,
 section {
   display: block;
 }
-body {
-  line-height: 1;
-}
-ol,
+  
 ul {
   list-style: none;
 }
@@ -129,42 +126,45 @@ table {
 
 
 .wrap {
-  width: 75%;
+  width: 70%;
   margin: auto;
 }
 
-section {
-  min-height: 80vh;
-}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-$color-1: rgb(202, 84, 233);
+
+$color-1: rgb(176, 149, 212);
 $color-1-opa50: rgba(202, 84, 233, 0.5);
 $color-1-opa25: rgba(202, 84, 233, 0.25);
 $color-1-opa15: rgba(202, 84, 233, 0.15);
 
 $color-2: #575757;
-$color-3: rgb(140, 180, 0);
-$color-3-opa50: rgb(140, 180, 0, 0.5);
-$color-3-opa25: rgb(140, 180, 0, 0.25);
-$color-3-opa15: rgb(140, 180, 0, 0.15);
+$color-3: rgb(111, 157, 143);
+$color-3-opa50: rgb(111, 157, 143, 0.5);
+$color-3-opa25: rgb(111, 157, 143, 0.25);
+$color-3-opa15: rgb(111, 157, 143, 0.15);
 
 
 $color-4: #ffffff;
 
 
-$font-text: "Poppins", sans-serif;
-$font-special: "Poppins", sans-serif;
+body{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 
 .title-container {
   margin-bottom: 2rem;
   margin-top: 4rem;
 
   &.green{
-    border-left: 1.5rem solid $color-3-opa25;
+    border-left: 1.5rem solid #6f9d8f;
   }
 
   &.pink{
-    border-left: 1.5rem solid $color-1-opa25;
+    border-left: 1.5rem solid $color-1;
   }
 
   & h4 {
@@ -203,7 +203,7 @@ $font-special: "Poppins", sans-serif;
     cursor: pointer;
 
     &.main {
-      background-color: $color-2;
+      background-color: #6f9d8f;
       border: none;
       // box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.257);
       color: $color-4;
@@ -233,8 +233,8 @@ $font-special: "Poppins", sans-serif;
       }
     }
 
-    &.pink{
-      background-color: $color-1-opa25;
+    &.white{
+      background-color: white;
       border: none;
 
       &:hover {
@@ -247,9 +247,26 @@ $font-special: "Poppins", sans-serif;
       }
     }
 
-    &.green{
-      background-color: $color-3-opa25;
+    &.pink{
+      background-color: $color-1;
       border: none;
+      color: white;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        background-color: white;
+        color: $color-1;
+        border: 1px solid $color-1;
+        transition: all 0.3s linear 0.1s;
+      }
+    }
+
+    &.green{
+      background-color: $color-3;
+      border: none;
+      color: white;
+      font-weight: 600;
 
       &:hover {
         cursor: pointer;
@@ -261,8 +278,4 @@ $font-special: "Poppins", sans-serif;
       }
     }
   }
-}
-
-html {
-  font-family: $font-text;
 }

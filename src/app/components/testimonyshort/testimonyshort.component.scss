@@ -1,11 +1,13 @@
 @import "../../../styles";
 
 #testimonyshort {
-  background-color: $color-3-opa15;
-  margin-top: 2rem;
+  background: linear-gradient(
+    45deg,
+    rgba(124, 255, 232, 0.25),
+    white);
+    padding: 6rem 0;
 
   & .full-container {
-    padding-top: 2rem;
     width: 70%;
     margin: auto;
 
@@ -19,6 +21,8 @@
         background-color: white;
         border-radius: 8px;
         padding: 2rem;
+        box-shadow: 5px 5px 10px #00000024;
+        margin-bottom: 3rem;
 
         & h4 {
           font-size: 1.2rem;

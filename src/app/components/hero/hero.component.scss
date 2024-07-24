@@ -1,18 +1,12 @@
 @import "../../../styles";
 
 #hero {
-  margin-top: 7rem;
-  background-color: $color-1-opa25;
-  background-image: url('../../../assets/img/pics/loto_flower5.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
+  background: linear-gradient(45deg, rgba(124, 255, 232, 0.25), white);
 
   & .full-container {
-    width: 85%;
-    height: 70vh;
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 9rem;
+    padding-bottom: 2rem;
+    box-sizing: content-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +15,25 @@
     & .container-leftside {
       width: 50%;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: start;
+
+      & h1 {
+        font-size: 2.5rem;
+        color: #17332c;
+        line-height: 4rem;
+        margin-bottom: 2rem;
+
+        & span {
+          font-weight: 600;
+          // color: $color-1;
+        }
+      }
+
+      & button{
+        display: flex;
+        justify-content: center;
+      }
 
       & img {
         width: 60%;
@@ -30,20 +42,8 @@
 
     & .container-rightside {
       width: 50%;
-
-      & h1 {
-        font-size: 2.5rem;
-        font-family: $font-text;
-        color: $color-2;
-        line-height: 4rem;
-        text-align: center;
-        margin-bottom: 2rem;
-
-        & span {
-          font-weight: 600;
-          // color: $color-1;
-        }
-      }
+      display: flex;
+      justify-content: end;
     }
   }
 }

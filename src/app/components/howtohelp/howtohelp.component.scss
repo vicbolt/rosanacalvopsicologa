@@ -1,59 +1,125 @@
 @import "../../../styles";
 
 #howtohelp {
-  margin-top: 4rem;
+  background: linear-gradient(183deg, white, rgb(246 242 244));
+
 
   & .full-container {
-    width: 70%;
-    margin: auto;
-
     & h3 {
-      font-family: $font-special !important;
       color: $color-2;
       margin-bottom: 2rem;
       text-align: center;
     }
 
-    & .cards-container {
+
+    & .card-container{
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
 
-      & img {
-        width: 9%;
-        margin-bottom: 2.2rem;
-      }
-
-      & .card {
-        opacity: 0;
-        width: 60%;
+      & .card1, .card3 {
+        background-color: white;
+        width: 65%;
+        height: 15rem;
         border-radius: 16px;
-        background-color: $color-3-opa25;
-        padding: 3rem;
-        margin: 1rem 0 1rem 0;
+        padding: 3rem 3rem 3rem 10rem;
+        margin: 2rem 0 2rem 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: start;
+        box-sizing: border-box;
+        box-shadow: 4px 5px 7px #5f5f5f47;
+        position: relative;
+        margin-left: 6rem;
 
-        &:hover {
-          transform: scale(1.02);
-          transition: all 1s linear 0.1s;
+        & .text{
+          background-color: rgb(255, 255, 255);
+          padding: 1rem;
+          backdrop-filter: blur(20px);
+          
         }
-
+  
+        & img {
+          position: absolute;
+          left: -40px;
+          width: 20%;
+        }
+  
+        & .cardi {
+          position: absolute;
+          top: 0;
+          left: 0px;
+          width: 104%;
+          height: 15rem;
+          box-shadow: 4px 5px 7px rgba(95, 95, 95, 0.2784313725);
+          border-radius: 16px;
+        }
+  
+  
         & h4 {
-          font-size: 1.7rem;
-          font-weight: 600;
-          color: $color-2;
-        }
-
-        & p {
-          padding: 2rem;
           text-align: center;
-          font-size: 1rem;
-          line-height: 2rem;
-          color: $color-2;
+          font-size: 2rem;
+          font-weight: 600;
+          color: rgb(61, 61, 61);
+          margin-bottom: 1rem;
+        }
+  
+        & p {
+          text-align: justify;
+          font-size: .9rem;
+          line-height: 1.5rem;
+          color: rgb(80, 80, 80);
+        }
+      }
+  
+      & .card2, .card4 {
+        width: 65%;
+        height: 15rem;
+        border-radius: 16px;
+        background-color: #ffffff;
+        padding: 3rem 10rem 3rem 3rem;
+        margin: 2rem 0 2rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: start;
+        box-sizing: border-box;
+        box-shadow: 4px 5px 7px #5f5f5f47;
+        position: relative;
+        margin-right: 6rem;
+        align-self: end;
+  
+        & img {
+          position: absolute;
+          right: -40px;
+          width: 20%;
+          z-index: 3;
+        }
+  
+        & .cardi {
+          background-color: rgba(255, 255, 255, 0);
+          position: absolute;
+          top: 0;
+          right: 0px;
+          width: 104%;
+          height: 15rem;
+          box-shadow: 4px 5px 7px rgba(95, 95, 95, 0.2784313725);
+          border-radius: 16px;
+        }
+  
+  
+        & h4 {
+          font-size: 2rem;
+          font-weight: 600;
+          color: rgb(61, 61, 61);
+          margin-bottom: 1rem;
+        }
+  
+        & p {
+          text-align: justify;
+          font-size: .9rem;
+          line-height: 1.5rem;
+          color: rgb(80, 80, 80);
         }
       }
     }
