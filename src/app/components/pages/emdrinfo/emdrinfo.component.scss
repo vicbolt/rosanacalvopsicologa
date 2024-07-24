@@ -3,11 +3,30 @@
 
 #infoEmdr{
     flex-direction: column;
-    margin-top: 7rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
     width: 100%;
-    background-image: url('../../../../assets/img/icons/gradient-balls4.png');
+    background-image: url('../../../../assets/img/backgrounds/brain-pattern-gray.png');
     background-repeat: no-repeat;
     background-size: cover;
+
+    & .title {
+        position: relative;
+    
+        & h3 {
+            font-size: 6rem;
+            font-weight: 600;
+            color: $color-3-opa15;
+        }
+    
+        & p {
+            position: absolute;
+            top: 27px;
+            font-size: 3rem;
+            font-weight: 600;
+            color: $color-3;
+        }
+    }
 
     & .full-container{
         padding-top: 6rem;
@@ -19,7 +38,7 @@
 
 
         & .container-leftside{
-            width: 50%;
+            width:40%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -33,7 +52,12 @@
         }
 
         & .container-rightside{
-            width: 50%;
+            width: 60%;
+            background: white;
+            padding: 2rem;
+            box-sizing: border-box;
+            border-radius: 16px;
+        
 
             & p{
                 font-size: .9rem;
@@ -43,6 +67,7 @@
 
                 & span{
                     font-weight: 600;
+                    color: $color-3;
                 }
             }
         }
@@ -53,15 +78,42 @@
         padding-bottom: 2rem;
         width: 70%;
         margin: auto;
+        display: flex;
+        justify-content: space-between;
 
-        & p{
-            font-size: .9rem;
+        & .leftside{
+            width: 30%;
+            & p{
+                font-size: .9rem;
+                margin-bottom: 1rem;
+                text-align: justify;
+                line-height: 1.6rem;
+                & span{
+                    font-weight: 600;
+                    color: $color-3;
+                }
+            }
+        }
+
+        & .rightside{
+            width: 65%;
+
+            & img {
+                width: 100%;
+                border-radius: 16px;
+            }
+        }
+
+        
+    }
+    & .out-container{
+        font-size: .9rem;
             margin-bottom: 1rem;
             text-align: justify;
             line-height: 1.6rem;
             & span{
                 font-weight: 600;
+                color: $color-3;
             }
-        }
     }
 }
