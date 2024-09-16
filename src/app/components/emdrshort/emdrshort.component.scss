@@ -1,0 +1,50 @@
+@import "../../../styles";
+
+.emdrshort{
+    margin-bottom: 120px;
+
+    .container{
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+
+        img{
+            width: 48%;
+            border-radius: $br $br 90px $br;
+        }
+
+        .rightside{
+            width: 48%;
+
+            .ventaja{
+                display: flex;
+                align-items: center;
+                margin: 15px 0px;
+
+                opacity: 0;
+                transform: translateX(100px);
+                transition: opacity 2s ease-out, transform 1.5s ease-in-out;
+        
+                &.in-view {
+                  opacity: 1;
+                  transform: translateX(0);
+                }
+
+                p{
+                    margin: 0;
+                }
+
+                img.icon{
+                    border-radius: unset;
+                    width: 10px;
+                    height: 10px;
+                    margin-right: 10px;
+                }
+            }
+
+            div.btn-2{
+                margin-top: 40px;
+            }
+        }
+    }
+}

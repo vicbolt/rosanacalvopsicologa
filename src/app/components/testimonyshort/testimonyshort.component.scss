@@ -1,48 +1,90 @@
 @import "../../../styles";
 
 #testimonyshort {
-  background: linear-gradient(
-    45deg,
-    rgba(124, 255, 232, 0.25),
-    white);
-    padding: 6rem 0;
 
   & .full-container {
     width: 70%;
     margin: auto;
 
-    & .container-flex {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 2rem;
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+    
+      .carousel {
+          display: flex;
+          transition: transform 0.4s ease-in-out;
+          width: 100%; // Se asegura de que el contenedor ocupe el espacio necesario.
+          padding: 0 8rem;
+          box-sizing: border-box;
 
-      & .box {
-        width: 25%;
-        background-color: white;
-        border-radius: 8px;
-        padding: 2rem;
-        box-shadow: 5px 5px 10px #00000024;
-        margin-bottom: 3rem;
+          hr.separator{
+            border: none;
+            background-color:$color-2-opa15;
+            margin-bottom: 20px;
+            height: 1px;
+          }
+    
+        .slide {
+          min-width: 100%;
+          box-sizing: border-box;
+          text-align: center;
+          padding: 20px 80px;
+          border-radius: 10px;
+          box-shadow: $bs-pink;
+          margin-right: 16rem;
 
-        & h4 {
-          font-size: 1.2rem;
-          font-weight: 600;
-          color: $color-1;
-          margin-bottom: 0.7rem;
+          img{
+            display: flex;
+            width: 12%;
+            margin-bottom: 10px;
+          }
+
+          p{
+            font-size: 12px;
+          }
+  
         }
-
-        & h5 {
-          font-size: 1rem;
-          font-style: italic;
-          margin-bottom: 1rem;
-          color: $color-2;
+      }
+    
+      .prev-btn, .next-btn {
+        font-size: 50px;
+        background-color: transparent;
+        font-weight: 600;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $color-2;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    
+        &.prev-btn {
+          left: 10px;
         }
-
-        & p {
-          font-size: 0.8rem;
-          line-height: 1.6rem;
-          color: $color-2;
-          text-align: justify;
+    
+        &.next-btn {
+          right: 10px;
+        }
+      }
+    
+      .dots {
+        text-align: center;
+        margin-top: 10px;
+    
+        .dot {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background-color: $color-2;
+          border-radius: 50%;
+          margin: 0 5px;
+          cursor: pointer;
+    
+          &.active {
+            background-color: #333;
+          }
         }
       }
     }

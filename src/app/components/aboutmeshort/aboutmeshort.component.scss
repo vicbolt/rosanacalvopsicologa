@@ -1,78 +1,52 @@
 @import "../../../styles";
 
 #aboutmeshort {
-  background-image: url('../../../assets/img/backgrounds/morado-mountain.png');
-  background-size: cover;
-  background-repeat: no-repeat;
 
   & .full-container {
-    padding: 6rem 0;
     box-sizing: border-box;
-
-    & .title {
-      position: relative;
-
-      & h3 {
-        font-size: 6rem;
-        font-weight: 600;
-        color: #efd5ed5c;
-      }
-
-      & p {
-        position: absolute;
-        top: 27px;
-        font-size: 3rem;
-        font-weight: 600;
-        color: rgb(176 149 212);
-      }
-    }
+    margin-bottom: 100px;
 
     & .container-flex {
+      margin-top: 100px;
+      min-height: 380px;
       display: flex;
       justify-content: space-between;
-      background: #dbdbdb4a;
-      border-radius: 16px;
-      box-shadow: 4px 5px 17px #b095d4;
+      background: $gradient-pink;
+      border-radius: $br;
+      box-shadow: $bs-green;
       backdrop-filter: blur(15px);
-      padding: 3rem;
-      margin: 10rem 0;
       box-sizing: border-box;
 
+      h4, p.caption{
+        color: $color-2;
+      }
+
+
       & .container-leftside {
-        width: 30%;
+        width: 35%;
         position: relative;
+        display: flex;
+        justify-content: center;
 
 
         & img {
-          width: 110%;
+          width: 70%;
           position: absolute;
-          bottom: -3rem;
-          filter: drop-shadow(4px 4px 10px #d6b5dd);
+          bottom: 0;
+
+          opacity: 0;
+          transition: opacity 0.9s ease-out;
+  
+          &.in-view {
+            opacity: 1;
+          }
         }
       }
 
       & .container-rightside {
-        width: 60%;
+        padding: 3rem;
+        width: 65%;
         box-sizing: border-box;
-
-        & h3 {
-          font-size: 1.6rem;
-          font-weight: 600;
-          margin-bottom: .2rem;
-        }
-
-        & h4 {
-          font-size: 1rem;
-          font-style: italic;
-          margin-bottom: 1rem;
-        }
-
-        & p {
-          font-size: 1rem;
-          line-height: 1.5rem;
-          text-align: justify;
-          margin-bottom: 3rem;
-        }
       }
     }
 

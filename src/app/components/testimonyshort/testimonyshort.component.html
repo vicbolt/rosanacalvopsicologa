@@ -1,41 +1,32 @@
 <section id="testimonyshort">
-    <div class="full-container">
-
-        <div class="title-container green">
-            <h4>RESEÑAS</h4>
-            <h2>Opiniones de pacientes</h2>
-        </div>
-
-        <div class="container-flex">
-
-            <div class="box">
-                <h4>Víctor, 31 años.</h4>
-                <h5>Ataques de panico y mareos</h5>
-                <p>"Durante más de 10 años he convivido con mareos, (somatización de mi ansiedad). Había probado distintos
-                    métodos y técnicas pero gracias a Rosana y su experiencia con la terapia EMDR, he conseguido
-                    entender de donde venían todos esos miedos y poco a poco ir trabajandolos juntos para sentir que
-                    tengo de nuevo el control. Suena tópico, pero Rosana me ha cambiado la vida."</p>
-            </div>
-            <div class="box">
-                <h4>María, 32 años.</h4>
-                <h5>Ansiedad Laboral</h5>
-                <p>"La ansiedad en el trabajo estaba afectando seriamente mi vida. Sentía que no podía controlar mis
-                    pensamientos ni mis emociones. Después de algunas sesiones de terapia con Rosana, empecé a notar
-                    cambios significativos. Aprendí técnicas para manejar mi ansiedad y encontré un nuevo sentido de
-                    calma y claridad. Estoy agradecido por el apoyo y la orientación de Rosana en este proceso".</p>
-            </div>
-            <div class="box">
-                <h4>Sofía, 20 años.</h4>
-                <h5>Ruptura Amorosa</h5>
-                <p>"La ruptura con mi pareja fue devastadora y me dejó sintiéndome perdida y rota. Decidí buscar ayuda y
-                    encontré a Rosana. Con su apoyo y la terapia EMDR, pude procesar mis emociones y reconstruir mi
-                    autoestima. Ahora, aunque el dolor sigue siendo parte de mi historia, me siento más fuerte y lista
-                    para seguir adelante. Gracias, Rosana, por ser mi guía en este difícil viaje".</p>
-            </div>
-
-        </div>
-        <div class="container-button center">
-            <button class="green" [routerLink]="['/testimonys']">Ver más testimonios</button>
-        </div>
+  <div class="full-container">
+    <div class="title-container pink">
+      <img src="../../../assets/img/icons/asterisc-pink.png" alt="Asterisco en color rosa">
+      <div>
+        <h4>RESEÑAS</h4>
+        <h2>Opiniones de pacientes</h2>
+      </div>
     </div>
+
+    <div class="carousel-container">
+        <div class="carousel" [style.transform]="getTransformStyle()">
+          <div *ngFor="let slide of slides; let i = index" class="slide">
+              <img src="../../../assets/img/icons/Stars.svg" alt="5 estrellas">
+            <div style="display: flex; align-items: baseline;">
+                <h4 style="margin-right: 20px;">{{ slide.client }}, {{ slide.age }} </h4>
+                <p class="caption" style="margin: 0;">({{ slide.motivation }})</p>
+            </div>
+              <hr class="separator">
+
+            <p>{{ slide.text }}</p>
+
+          </div>
+        </div>
+        <button (click)="showPreviousSlide()" class="prev-btn">⟨</button>
+        <button (click)="showNextSlide()" class="next-btn">⟩</button>
+        <div class="dots">
+          <span *ngFor="let dot of slides; let i = index" (click)="goToSlide(i)" [class.active]="i === currentIndex" class="dot"></span>
+        </div>
+      </div>
+  </div>
 </section>

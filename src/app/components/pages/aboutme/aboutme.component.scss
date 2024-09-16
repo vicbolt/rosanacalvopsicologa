@@ -1,141 +1,128 @@
 @import "../../../../styles.scss";
 
 .container {
-    background-image: url('../../../../assets/img/backgrounds/aboutme-back3.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 8rem;
+//   background-image: url("../../../../assets/img/backgrounds/aboutme-back3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 6rem;
+  box-sizing: border-box;
+  background: $gradient-green;
+
+
+  & .container-set1 {
+    // background: $gradient-pink;
+    box-shadow: $bs-green;
     box-sizing: border-box;
+    border-radius: 16px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 
-    & .title {
-        position: relative;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 
-        & h3 {
-            font-size: 6rem;
-            font-weight: 600;
-            color: #efd5ed5c;
-        }
-
-        & p {
-            position: absolute;
-            top: 27px;
-            font-size: 3rem;
-            font-weight: 600;
-            color: rgb(176 149 212);
-        }
-
-        &.green{
-            & h3{
-            color: $color-3-opa15;
-            }
-            & p{
-                color: $color-3;
-            }
-        }
+    &.in-view {
+      opacity: 1;
+      transform: translateX(0);
     }
 
-    & .container-set1 {
-        background: linear-gradient(255deg, #faf0f900, #b095d473);
-        padding: 3rem;
-        box-sizing: border-box;
-        border-radius: 16px;
-        margin-top: 2rem;
-        display: flex;
-        justify-content: space-between;
+    & .leftside {
+      width: 66%;
+      backdrop-filter: blur(30px);
+      border-radius: 16px;
+      padding: 2rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
-
-        & .leftside {
-            width: 60%;
-            background-color: rgba(255, 255, 255, 0.47);
-            backdrop-filter: blur(20px);
-            border-radius: 16px;
-            padding: 2rem;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            & p {
-                line-height: 1.7rem;
-                margin-bottom: 1rem;
-                text-align: justify;
-                font-size: 1rem;
-
-                & span {
-                    font-weight: 700;
-                    color: purple;
-                }
-            }
-        }
-
-        & .rightside {
-            width: 40%;
-            display: flex;
-            justify-content: center;
-
-            & img {
-                width: 70%;
-                border-radius: 16px;
-            }
-
-        }
+      & span {
+        font-weight: 600;
+      }
     }
 
-    & .container-set2 {
-        margin-top: 4rem;
+    & img {
+      width: 29%;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-radius: $br $br $br 90px;
+    }
+  }
 
-        & p {
-            line-height: 1.7rem;
-            margin-bottom: 1rem;
-            text-align: justify;
-            font-size: 1rem;
+  & .container-set2 {
+    margin-top: 4rem;
 
+    opacity: 0;
+    transform: translateX(200px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 
-            & span {
-                color: purple;
-                font-weight: 700;
-            }
-        }
-
-        & button{
-            margin: 3rem 0 7rem 0;
-        }
-
+    &.in-view {
+      opacity: 1;
+      transform: translateX(0);
     }
 
-    & .container-set3 {
-        border-radius: 16px;
-        padding: 3rem;
-        box-sizing: border-box;
-        margin-bottom: 3rem;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        & .card{
-            width: 49%;
-            box-shadow: 1px 1px 10px $color-3-opa25;
-            border-radius: 16px;
-            padding: 2rem;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(15px);
-
-            & h3{
-                font-weight: 600;
-                font-size: 1rem;
-                margin-bottom: 1rem;
-                text-align: center;
-            }
-
-            & p{
-                font-size: .8rem;
-                text-align: center;
-            }
-        }
+    & span {
+      font-weight: 600;
     }
+
+    button{
+        margin-top: 40px;
+    }
+  }
+
+  & .container-set3 {
+    border-radius: 16px;
+    padding: 3rem;
+    box-sizing: border-box;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    opacity: 0;
+    transform: translateX(200px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+    &.in-view {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    & .card {
+        background-color: white;
+      width: 24%;
+      box-shadow: $bs-green;
+      border-radius: 16px;
+      padding: 20px 20px 10px 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(15px);
+
+      h4{
+        font-size: 13px;
+        text-align: center;
+        margin: 0;
+      }
+
+      p{
+        text-align: center;
+        font-size: 11px;
+
+        &.info{
+            font-size: 10px;
+            line-height: unset;
+        }
+      }
+    }
+  }
 }

@@ -2,13 +2,13 @@
 
 #menu-nav {
   width: 100%;
-  background-color: #ffffff82;
-  padding: 1.5rem 0;
+  padding: 0.5rem 0;
   box-sizing: content-box;
   position: fixed;
   top: 0;
   z-index: 3;
   backdrop-filter: blur(21.8px);
+  font-family: "Montserrat", sans-serif;
 
   & .full-container {
     width: 70%;
@@ -26,7 +26,7 @@
       position: absolute;
       border-radius: 0 0 8px 8px;
       width: 90% !important;
-      margin-top: .1rem;
+      margin-top: 0.1rem;
 
       & h4 {
         color: $color-2;
@@ -44,17 +44,19 @@
     }
 
     & .container-leftside {
-      width: 50%;
+      width: 30%;
       height: 100%;
       display: flex;
       align-items: center;
 
       & .logo {
+        display: flex;
+        align-items: center;
         width: 40%;
-        & img {
-          width: 100%;
-        }
 
+        img {
+          width: 120%;
+        }
       }
 
       & .isologo {
@@ -64,21 +66,21 @@
         align-items: start;
 
         & img {
-          width: 40%;
+          width: 30%;
         }
 
         & p {
           display: flex;
           justify-content: center;
-          margin-left: .7rem;
-          font-size: .9rem;
+          margin-left: 0.7rem;
+          font-size: 0.9rem;
           text-decoration: none;
         }
       }
     }
 
     & .container-rightside {
-      width: 60%;
+      width: 70%;
       height: 100%;
       display: flex;
       justify-content: space-around;
@@ -86,20 +88,22 @@
 
       & a,
       div {
-        width: 25%;
-        color: black;
-        font-size: 1rem;
-        text-decoration: none;
-        text-align: center;
+        &.textlink {
+          width: 25%;
+          color: $color-4-opa50;
+          font-size: 14px;
+          text-decoration: none;
+          text-align: center;
+          transition: color 0.5s ease;
 
-        &:hover {
-          transform: scale(1.1);
-          color: $color-3;
-        }
+          &:hover {
+            color: $color-2;
+          }
 
-        &.active {
-          color: $color-3;
-          font-weight: 600;
+          &.active {
+            color: $color-4;
+            font-weight: 600;
+          }
         }
       }
     }

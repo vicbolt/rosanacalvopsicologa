@@ -1,119 +1,68 @@
 @import "../../../../styles.scss";
 
+#infoEmdr {
+  flex-direction: column;
+  padding-top: 50px;
+  width: 100%;
+  background-image: url("../../../../assets/img/backgrounds/brain-pattern-gray.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 
-#infoEmdr{
-    flex-direction: column;
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-    width: 100%;
-    background-image: url('../../../../assets/img/backgrounds/brain-pattern-gray.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+  & .full-container {
+    padding-top: 6rem;
+    width: 70%;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
 
-    & .title {
-        position: relative;
-    
-        & h3 {
-            font-size: 6rem;
-            font-weight: 600;
-            color: $color-3-opa15;
-        }
-    
-        & p {
-            position: absolute;
-            top: 27px;
-            font-size: 3rem;
-            font-weight: 600;
-            color: $color-3;
-        }
+    & .container-leftside {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    & .full-container{
-        padding-top: 6rem;
-        padding-bottom: 2rem;
-        width: 70%;
-        margin: auto;
-        justify-content: space-between;
-        display: flex;
+    & .container-rightside {
+      width: 60%;
+      background: white;
+      box-sizing: border-box;
+      border-radius: 16px;
 
+      & span {
+        font-weight: 600;
+      }
+    }
+  }
 
-        & .container-leftside{
-            width:40%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+  & .full-container2 {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
 
-            & h2{
-                font-size: 1.6rem;
-                font-weight: 500;
-                color: $color-2;
-                margin-bottom: 1rem;
-            }
-        }
+    & .leftside {
+      width: 30%;
 
-        & .container-rightside{
-            width: 60%;
-            background: white;
-            padding: 2rem;
-            box-sizing: border-box;
-            border-radius: 16px;
-        
-
-            & p{
-                font-size: .9rem;
-                margin-bottom: 1rem;
-                text-align: justify;
-                line-height: 1.6rem;
-
-                & span{
-                    font-weight: 600;
-                    color: $color-3;
-                }
-            }
-        }
+      & span {
+        font-weight: 600;
+      }
     }
 
-    & .full-container2{
-        padding-top: 6rem;
-        padding-bottom: 2rem;
-        width: 70%;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
+    & .rightside {
+      width: 65%;
 
-        & .leftside{
-            width: 30%;
-            & p{
-                font-size: .9rem;
-                margin-bottom: 1rem;
-                text-align: justify;
-                line-height: 1.6rem;
-                & span{
-                    font-weight: 600;
-                    color: $color-3;
-                }
-            }
-        }
-
-        & .rightside{
-            width: 65%;
-
-            & img {
-                width: 100%;
-                border-radius: 16px;
-            }
-        }
-
-        
+      & img {
+        width: 100%;
+        border-radius: 16px;
+        filter: grayscale(.4);
+      }
     }
-    & .out-container{
-        font-size: .9rem;
-            margin-bottom: 1rem;
-            text-align: justify;
-            line-height: 1.6rem;
-            & span{
-                font-weight: 600;
-                color: $color-3;
-            }
+  }
+  & .out-container {
+    & span {
+      font-weight: 600;
     }
+  }
 }

@@ -1,32 +1,55 @@
 <section class="container">
   <div class="wrap">
 
-    <div class="title green">
-      <h3>Precios de la consulta</h3>
-      <p>Precios de la consulta</p>
+    <div class="title-container pink">
+      <img src="../../../assets/img/icons/asterisc-pink.png" alt="">
+      <div>
+        <h4>Servicios</h4>
+        <h2>Opciones de consulta</h2>
+      </div>
     </div>
 
+ 
 
     <div class="container-cards">
+
       <div class="card">
-        <h2>Terapia Presencial</h2>
-        <span>60€</span>
-        <p>Sesión de una hora de duración en consulta presencial</p>
-        <p class="add-info">Pago en consulta tras la sesión</p>
-        <div class="btn-container">
-          <button [routerLink]="['/contactme']">Pedir Cita</button>
+        <div class="container_title presencial">
+          <h4>Terapia presencial</h4>
         </div>
+        <div class="container_img presencial">
+        </div>
+        <div class="container_info">
+          <p><span>Precio</span> 60€</p>
+          <p><span>Duración: </span>Sesión de 1h en consulta</p>
+          <p><span>Espacio tranquilo: </span>Consulta en un entorno diseñado para el bienestar.</p>
+          <p><span>Conexión humana directa </span>Sesión en la que puedes sentirte acompañado/a.</p>
+          <p><span>Ideal para:</span> Quienes buscan una experiencia más cercana y presencial.</p>
+          <div class="container_dir">
+            <img src="../../../../assets/img/icons/metro.png" alt="Logotipo del metro de Madrid">
+            <p>Metro Prosperidad</p>
+          </div>
+        </div>
+        <button class="btn-1 green" [routerLink]="['/contactme']">Pedir Cita</button>
       </div>
 
       <div class="card">
-        <h2>Terapia Online</h2>
-        <span>60€</span>
-        <p>Sesión de una hora de duración online</p>
-        <p class="add-info">Pago en consulta tras la sesión</p>
-        <div class="btn-container">
-          <button [routerLink]="['/contactme']">Pedir Cita</button>
+        <div class="container_title online">
+        <h4>Terapia Online</h4>
         </div>
+        <div class="container_img online">
+        </div>
+        <div class="container_info">
+        <p><span>Precio</span> 60€</p>
+        <p><span>Duración: </span>Sesión online de 1h</p>
+        <p><span>Comodidad: </span>Realiza tu consulta desde cualquier lugar.</p>
+        <p><span>Flexibilidad: </span>Horarios adaptados a tu disponibilidad.</p>
+        <p><span>Privacidad Garantizada: </span>Sesiones en entornos seguros y confidenciales.</p>
+        <p><span>Ideal para:</span> Personas con agendas ocupadas o que prefieren evitar desplazamientos.</p>
       </div>
+        <button class="btn-1 pink" [routerLink]="['/contactme']">Pedir Cita</button>
+      </div>
+
     </div>
   </div>
 </section>

@@ -1,8 +1,14 @@
 <section class="form">
   <div class="wrap">
-    <div class="title">
-      <h3>Contacta conmigo</h3>
-      <p>Contacta conmigo</p>
+
+    <div class="title-container green">
+      <img src="../../../assets/img/icons/asterisc-green.png" alt="">
+      <div>
+        <h4>Contacta conmigo</h4>
+        <h2>
+          Rellena este breve formulario para contactar conmigo
+        </h2>
+      </div>
     </div>
 
     <div class="container">
@@ -20,7 +26,7 @@
             />
             <div>
               <div></div>
-              <h3 (click)="nextQuestionForm1()" *ngIf="mensaje.name">
+              <h3 class="btn-1 green" (click)="nextQuestionForm1()" *ngIf="mensaje.name">
                 Continuar &nbsp; &rarr;
               </h3>
             </div>
@@ -41,8 +47,8 @@
               (keyup.enter)="nextQuestionForm2()"
             />
             <div>
-              <h3 (click)="previousQuestionForm2()">&larr; &nbsp; Anterior</h3>
-              <h3 (click)="nextQuestionForm2()" *ngIf="mensaje.email">
+              <h3 class="btn-2 green" (click)="previousQuestionForm2()">&larr; &nbsp; Anterior</h3>
+              <h3 class="btn-1 green" (click)="nextQuestionForm2()" *ngIf="mensaje.email">
                 Continuar &nbsp; &rarr;
               </h3>
             </div>
@@ -83,8 +89,8 @@
             </div>
 
             <div>
-              <h3 (click)="previousQuestionForm3()">&larr; &nbsp; Anterior</h3>
-              <h3 *ngIf="mensaje.comPreference" (click)="handleClick()" >
+              <h3 class="btn-2 green" (click)="previousQuestionForm3()">&larr; &nbsp; Anterior</h3>
+              <h3 class="btn-1 green" *ngIf="mensaje.comPreference" (click)="handleClick()" >
                 Continuar &nbsp; &rarr;
               </h3>
             </div>
@@ -125,8 +131,8 @@
             </div>
 
             <div>
-              <h3 (click)="previousQuestionForm4()">&larr; &nbsp; Anterior</h3>
-              <h3 (click)="nextQuestionForm4()" *ngIf="mensaje.time">
+              <h3 class="btn-2 green" (click)="previousQuestionForm4()">&larr; &nbsp; Anterior</h3>
+              <h3 class="btn-1 green" (click)="nextQuestionForm4()" *ngIf="mensaje.time">
                 Continuar &nbsp; &rarr;
               </h3>
             </div>
@@ -143,8 +149,8 @@
               (keyup.enter)="nextQuestionForm5()"
             />
             <div>
-              <h3 (click)="previousQuestionForm5()">&larr; &nbsp; Anterior</h3>
-              <h3 (click)="nextQuestionForm5()" *ngIf="mensaje.phone">
+              <h3 class="btn-2 green" (click)="previousQuestionForm5()">&larr; &nbsp; Anterior</h3>
+              <h3 class="btn-1 green" (click)="nextQuestionForm5()" *ngIf="mensaje.phone">
                 Continuar &nbsp; &rarr;
               </h3>
             </div>
@@ -157,10 +163,11 @@
               rows="6"
               #name="ngModel"
               [(ngModel)]="mensaje.msg"
+              placeholder="Escribe aquí tu mensaje..."
             ></textarea>
             <div>
-              <h3 (click)="previousQuestionForm6()">&larr; &nbsp; Anterior</h3>
-              <h3 (click)="nextQuestionForm6()" *ngIf="mensaje.msg">
+              <h3 class="btn-2 green" (click)="previousQuestionForm6()">&larr; &nbsp; Anterior</h3>
+              <h3 class="btn-1 green" (click)="nextQuestionForm6()" *ngIf="mensaje.msg">
                 Continuar &nbsp; &rarr;
               </h3>
             </div>
@@ -184,8 +191,8 @@
               <p><span>{{ mensaje.msg }}</span></p>
               <hr>
               <div class="btns">
-                <h3 (click)="previousQuestionFormFinal()">Volver al formulario</h3>
-                <button type="submit">Enviar formulario</button>
+                <h3 class="btn-2 green" (click)="previousQuestionFormFinal()">Volver al formulario</h3>
+                <button class="btn-1 green" type="submit">Enviar formulario</button>
               </div>
             </div>
           </div>

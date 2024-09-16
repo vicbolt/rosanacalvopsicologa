@@ -1,30 +1,56 @@
 <div id="menu-nav">
-    <div class="full-container">
-        <a [routerLink]="['/home']" class="container-leftside">
-            <div class="logo">
-                <img src="../../../assets/img/icons/logo2.png" alt="Logotipo">
-            </div>
-            <div class="isologo">
-                <img src="assets/img/logos/main-logo.png" alt="Logotipo">
-            </div>
-        </a>
+  <div class="full-container">
+    <a [routerLink]="['/home']" class="container-leftside">
+      <div class="logo">
+        <img src="../../../assets/img/logos/LOGOTIPO2.png" alt="Logotipo" />
+      </div>
+    </a>
 
-        <div class="container-rightside">
-            <a [routerLink]="['/home']" [routerLinkActive]="['active']">Inicio</a>
-            <div id="info-btn" (mouseenter)="showSubcontainer()" (mouseleave)="hideSubcontainer()">
-                <a>Información</a>
+    <div class="container-rightside">
+      <a
+        class="textlink"
+        [routerLink]="['/home']"
+        [routerLinkActive]="['active']"
+        >Inicio</a
+      >
+      <div
+      class="textlink"
+        id="info-btn"
+        (mouseenter)="showSubcontainer()"
+        (mouseleave)="hideSubcontainer()"
+      >
+        <a>Información</a>
 
-                <div id="subcontainerInfo" class="subcontainer-info" [routerLinkActive]="['active']"
-                    *ngIf="subcontainer == true">
-                    <h4 [routerLink]="['/aboutme']">Sobre mí</h4>
-                    <h4 [routerLink]="['/EMDRinfo']">¿Que es la terapia EMDR?</h4>
-                    <h4 [routerLink]="['/testimonys']">Opiniones</h4>
-
-                </div>
-            </div>
-            <a [routerLink]="['/services']" [routerLinkActive]="['active']">Servicios</a>
-            <a [routerLink]="['/contactme']" [routerLinkActive]="['active']">Contacto</a>
+        <div
+          id="subcontainerInfo"
+          class="subcontainer-info"
+          [routerLinkActive]="['active']"
+          *ngIf="subcontainer == true"
+        >
+          <h4 [routerLink]="['/aboutme']">Sobre mí</h4>
+          <h4 [routerLink]="['/EMDRinfo']">¿Que es la terapia EMDR?</h4>
+          <h4 [routerLink]="['/testimonys']">Opiniones</h4>
         </div>
-
+      </div>
+      <a
+        class="textlink"
+        [routerLink]="['/services']"
+        [routerLinkActive]="['active']"
+        >Servicios</a
+      >
+      <a
+        class="textlink"
+        [routerLink]="['/contactme']"
+        [routerLinkActive]="['active']"
+        >Contacto</a
+      >
+      <a
+        [routerLink]="['/contactme']"
+        [routerLinkActive]="['active']"
+        >
+        <div class="btn-2 pink" style="width: 50%;">Contactar</div>
+        </a
+      >
     </div>
+  </div>
 </div>

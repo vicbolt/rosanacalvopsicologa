@@ -22,6 +22,9 @@ import { ThanksPageFormComponent } from './components/thanks-page-form/thanks-pa
 import { ServicesComponent } from './components/page/services/services.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/page/login/login.component';
+import { QuoteComponent } from './components/quote/quote.component';
+import { FaqComponent } from './components/faq/faq.component';
+import { EmdrshortComponent } from './components/emdrshort/emdrshort.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { LoginComponent } from './components/page/login/login.component';
     FormComponent,
     ThanksPageFormComponent,
     ServicesComponent,
-    LoginComponent
+    LoginComponent,
+    QuoteComponent,
+    FaqComponent,
+    EmdrshortComponent
   ],
   imports: [
     BrowserModule,
