@@ -29,8 +29,9 @@
       margin-top: 0.1rem;
 
       & h4 {
-        color: $color-2;
+        color: $color-4;
         text-decoration: none;
+        font-weight: 500;
         padding: 0.1rem;
         font-size: 0.8rem !important;
         width: 100% !important;
@@ -90,7 +91,7 @@
       div {
         &.textlink {
           width: 25%;
-          color: $color-4-opa50;
+          color: white;
           font-size: 14px;
           text-decoration: none;
           text-align: center;

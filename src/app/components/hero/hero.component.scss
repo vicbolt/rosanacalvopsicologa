@@ -2,9 +2,10 @@
 
 #hero {
   height: 700px;
-  background: url(../../../assets/img/pics/loto2.png), linear-gradient(0deg, $color-2-opa15, white);
-  background-position: right;
+  background: url(../../../assets/img/pics/heropicfinal.png);
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 
     & .container {
       height: inherit;
@@ -16,6 +17,7 @@
       h1{
         font-size: 50px;
         font-weight: 500;
+        color: white;
 
         opacity: 0;
         transform: translateX(-100px);
@@ -31,6 +33,7 @@
         font-size: 25px;
         font-weight: 200;
         margin-bottom: 50px;
+        color: white;
 
         opacity: 0;
         transform: translateX(100px);
