@@ -65,5 +65,12 @@
                 }
             }
         }
+    
+        @media (max-width: 1270px) {
+            & .box{
+                width: 100% !important;
+            }
+        }
+    
     }
 }

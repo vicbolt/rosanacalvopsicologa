@@ -1,17 +1,19 @@
 @import "../../../styles";
 
 #menu-nav {
+  display: none;
   width: 100%;
   padding: 0.5rem 0;
   box-sizing: content-box;
   position: fixed;
   top: 0;
   z-index: 3;
-  backdrop-filter: blur(21.8px);
+  background-color: white;
   font-family: "Montserrat", sans-serif;
+  box-shadow: 2px -11px 20px black;
 
   & .full-container {
-    width: 70%;
+    width: 90%;
     height: 100%;
     margin: auto;
     display: flex;
@@ -56,7 +58,7 @@
         width: 40%;
 
         img {
-          width: 120%;
+          width: 100%;
         }
       }
 
@@ -91,8 +93,8 @@
       div {
         &.textlink {
           width: 25%;
-          color: white;
-          font-size: 14px;
+          color: gray;
+          font-size: 15px;
           text-decoration: none;
           text-align: center;
           transition: color 0.5s ease;
@@ -107,6 +109,45 @@
           }
         }
       }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    & .full-container {
+      width: 95%;
+    }
+    & .container-leftside {
+      width: 40%;
+    }
+    & .container-rightside {
+      width: 60%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    & .full-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    & .container-leftside, .container-rightside {
+      width: 100%;
+      justify-content: center;
+    }
+    & .container-rightside {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    & .container-rightside {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    & .textlink {
+      width: 100%;
+      font-size: 14px;
     }
   }
 }

@@ -46,5 +46,14 @@
                 margin-top: 40px;
             }
         }
+        @media (max-width: 1000px) {
+            img {
+                display: none; // Esto oculta la imagen
+            }
+        
+            .rightside {
+                width: 100%; // El div de texto ocupa el 100% del espacio
+            }
+        }
     }
 }

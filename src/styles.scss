@@ -216,6 +216,7 @@ p {
 
   img{
     width: 4%;
+    height: 4%;
   }
 
   &.green{
@@ -382,8 +383,7 @@ p {
     color: white !important;
     &:hover{
       background-color: $color-5-opa50;
-      color: $color-5 !important;
-      border: 2px solid $color-5;
+      color: white !important;
     }
   }
 }
@@ -393,7 +393,7 @@ p {
   justify-content: center;
   align-items: center;
   min-width: 150px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.894);
   color: $color-2 !important;
   padding: .6rem .5rem;
   border-radius: $br;
@@ -404,22 +404,24 @@ p {
 
 
   &.pink{
-    color: $color-2;
-    border: 2px solid $color-2;
+    color: $color-2 !important;
+    border: 1px solid $color-2 !important;
 
     &:hover{
-      background-color: $color-2-opa15;
-      color: $color-2 !important;
+      transform: scale(.95);
+      transition: all .5s;
     }
   }
 
   &.green{
     color: $color-5 !important;
-    border: 2px solid $color-3;
+    border: none;
 
     &:hover{
-      background-color: $color-5;
+      background-color: rgba(255, 255, 255, 0.335);
       color: white !important;
+      border: 1px solid white;
+      backdrop-filter: blur(5px);
     }
   }
 

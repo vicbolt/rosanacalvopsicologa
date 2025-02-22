@@ -2,7 +2,7 @@
 
 #hero {
   height: 700px;
-  background: url(../../../assets/img/pics/heropicfinal.png);
+  background: url(../../../assets/img/pics/heropicfinal_nobee.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,6 +34,9 @@
         font-weight: 200;
         margin-bottom: 50px;
         color: white;
+        background: #007dc5a1;
+        width: fit-content;
+        border-radius: 20px;
 
         opacity: 0;
         transform: translateX(100px);
@@ -43,6 +46,45 @@
           opacity: 1;
           transform: translateX(0);
         }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      & .container {
+        width: 80%;
+      }
+      h1 {
+        font-size: 40px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      height: 500px;
+      & .container {
+        width: 90%;
+      }
+      h1 {
+        font-size: 35px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      height: 400px;
+      & .container {
+        width: 95%;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 18px;
+
       }
     }
   }

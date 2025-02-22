@@ -6,12 +6,11 @@
   margin-bottom: 0 !important;
   padding-bottom: 2rem;
 
-  .container-img{
+  .container-img {
     width: 100%;
     display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-
+    justify-content: center;
+    margin-bottom: 20px;
   }
 
   .container {
@@ -19,6 +18,7 @@
     background-color: $gradient-pink;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; // Permite que las columnas se ajusten en pantallas pequeñas
 
     .col {
       width: 33%;
@@ -26,9 +26,11 @@
       flex-direction: column;
       justify-content: start;
       align-items: center;
+      margin-bottom: 20px; // Agregamos un poco de espacio entre las columnas
 
       h4 {
         font-size: 12px;
+        text-align: center; // Centrar el título
       }
 
       a,
@@ -36,6 +38,7 @@
         font-size: 0.7rem;
         margin-bottom: 10px;
         line-height: unset;
+        text-align: center; // Centrar el texto de enlaces y párrafos
       }
     }
   }
@@ -46,6 +49,29 @@
       font-size: 0.7rem;
       text-align: center;
       font-weight: 600;
+    }
+  }
+
+  // Media query para pantallas de 1000px o menos
+  @media (max-width: 1000px) {
+    .container {
+      .col {
+        width: 48%; // Hacer que las columnas ocupen el 48% en lugar del 33% para más espacio
+      }
+    }
+  }
+
+  // Media query para pantallas de 600px o menos
+  @media (max-width: 600px) {
+    .container {
+      .col {
+        width: 100%; // Las columnas ocupan el 100% del ancho, apiladas verticalmente
+        margin-bottom: 15px; // Reducir el margen entre columnas
+      }
+    }
+
+    .copy p {
+      font-size: 0.6rem; // Reducir el tamaño de la fuente para pantallas pequeñas
     }
   }
 }
