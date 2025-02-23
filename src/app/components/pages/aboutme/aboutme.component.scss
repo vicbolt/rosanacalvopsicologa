@@ -158,6 +158,8 @@
 
     .container-set1 {
       margin-top: 50px;
+      transform: translateX(0px) !important;
+
     }
 
     .container-set1 .leftside {
@@ -176,12 +178,16 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      transform: translateX(0px) !important;
+
     }
 
     .container-set3 {
       flex-direction: column;
       align-items: center;
       padding: 2rem;
+      transform: translateX(0px) !important;
+
     }
 
     .container-set3 .card {
