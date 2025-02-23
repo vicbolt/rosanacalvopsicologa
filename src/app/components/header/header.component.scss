@@ -25,7 +25,7 @@
     height: 100%;
 
     .logo img {
-      width: 100%;
+      width: 50%;
     }
   }
 
@@ -97,6 +97,11 @@
 
   // Media queries
   @media (max-width: 1100px) {
+
+    .logo img {
+      width: 100% !important;
+    }
+
     .container-rightside {
       display: none;
     }
