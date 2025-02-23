@@ -3,9 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+  styleUrls: ['./header.component.scss']
 })
-
 export class HeaderComponent {
   menuOpen: boolean = false;
   subcontainer: boolean = false;
@@ -15,7 +14,7 @@ export class HeaderComponent {
     this.menuOpen = !this.menuOpen;
   }
 
-  // Métodos para el submenú (si los necesitas)
+  // Método para alternar el submenú (si lo necesitas)
   toggleSubMenu() {
     this.subcontainer = !this.subcontainer;
   }

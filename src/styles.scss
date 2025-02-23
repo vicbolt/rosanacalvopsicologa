@@ -419,6 +419,11 @@ p {
 
 
 @media (max-width: 920px) {
+
+  .wrap{
+width: 90%;
+  }
+
   .title-container{
     flex-direction: column !important;
     text-align: center !important;

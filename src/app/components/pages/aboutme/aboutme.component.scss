@@ -7,6 +7,7 @@
   background-position: center;
   padding-top: 6rem;
   box-sizing: border-box;
+  overflow-x: hidden;
 
   & .container-set1 {
     box-shadow: $bs-green;
@@ -165,9 +166,10 @@
     }
 
     .container-set1 img {
-      width: 60%;
+      width: 100%;
       position: static;
       margin-top: 2rem;
+      border-radius: none;
     }
 
     .container-set2 {

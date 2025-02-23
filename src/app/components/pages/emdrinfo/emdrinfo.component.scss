@@ -10,7 +10,6 @@
 
   & .full-container {
     padding-top: 6rem;
-    width: 70%;
     margin: auto;
     justify-content: space-between;
     display: flex;
@@ -37,7 +36,6 @@
   & .full-container2 {
     padding-top: 6rem;
     padding-bottom: 2rem;
-    width: 70%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -56,13 +54,45 @@
       & img {
         width: 100%;
         border-radius: 16px;
-        filter: grayscale(.4);
+        filter: grayscale(0.4);
       }
     }
   }
   & .out-container {
     & span {
       font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .full-container {
+    flex-direction: column;
+
+    & .asterisc {
+      display: none !important;
+    }
+
+    & .container-rightside {
+      width: 100% !important;
+    }
+  }
+
+  .full-container2 {
+    flex-direction: column-reverse;
+
+    & .rightside{
+      width: 100% !important;
+
+      & img{
+        width: 100% !important;
+        margin-bottom: 20px;
+      }
+    }
+
+
+    & .leftside {
+      width: 100% !important;
     }
   }
 }
