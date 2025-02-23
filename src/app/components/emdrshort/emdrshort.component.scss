@@ -1,6 +1,7 @@
 @import "../../../styles";
 
 .emdrshort{
+    overflow-x: hidden;
     margin-bottom: 120px;
 
     .container{
@@ -52,7 +53,15 @@
             }
         
             .rightside {
-                width: 100%; // El div de texto ocupa el 100% del espacio
+                width: 100%;
+
+                & p {
+                    text-align: center;
+                }
+
+                & div{
+                    justify-content: center;
+                }
             }
         }
     }

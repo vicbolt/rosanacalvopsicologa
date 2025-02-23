@@ -1,10 +1,12 @@
 @import "../../../styles";
 
 .footer {
+  overflow-x: hidden;
   margin-top: 200px;
   background: $gradient-pink;
   margin-bottom: 0 !important;
   padding-bottom: 2rem;
+  
 
   .container-img {
     width: 100%;

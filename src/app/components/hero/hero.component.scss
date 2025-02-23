@@ -1,11 +1,13 @@
 @import "../../../styles";
 
 #hero {
+  overflow-x: hidden;
   height: 700px;
   background: url(../../../assets/img/pics/heropicfinal_nobee.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-sizing: border-box;
 
     & .container {
       height: inherit;
@@ -62,7 +64,7 @@
     }
 
     @media (max-width: 768px) {
-      height: 500px;
+      height: 600px;
       & .container {
         width: 90%;
       }
@@ -75,7 +77,7 @@
     }
 
     @media (max-width: 480px) {
-      height: 400px;
+      height: 600px;
       & .container {
         width: 95%;
       }

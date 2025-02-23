@@ -1,17 +1,14 @@
 @import "../../../../styles.scss";
 
 .container {
-//   background-image: url("../../../../assets/img/backgrounds/aboutme-back3.png");
+  background: $gradient-green;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 6rem;
   box-sizing: border-box;
-  background: $gradient-green;
-
 
   & .container-set1 {
-    // background: $gradient-pink;
     box-shadow: $bs-green;
     box-sizing: border-box;
     border-radius: 16px;
@@ -19,7 +16,6 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-
     opacity: 0;
     transform: translateX(200px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -57,7 +53,6 @@
 
   & .container-set2 {
     margin-top: 4rem;
-
     opacity: 0;
     transform: translateX(200px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -71,8 +66,8 @@
       font-weight: 600;
     }
 
-    button{
-        margin-top: 40px;
+    button {
+      margin-top: 40px;
     }
   }
 
@@ -95,7 +90,7 @@
     }
 
     & .card {
-        background-color: white;
+      background-color: white;
       width: 24%;
       box-shadow: $bs-green;
       border-radius: 16px;
@@ -108,21 +103,115 @@
       margin-bottom: 2rem;
       backdrop-filter: blur(15px);
 
-      h4{
+      h4 {
         font-size: 13px;
         text-align: center;
         margin: 0;
       }
 
-      p{
+      p {
         text-align: center;
         font-size: 11px;
 
-        &.info{
-            font-size: 10px;
-            line-height: unset;
+        &.info {
+          font-size: 10px;
+          line-height: unset;
         }
       }
+    }
+  }
+
+  // ** Media Queries para hacer la página responsive **
+
+  // Para pantallas de tablet y menos
+  @media (max-width: 1024px) {
+    .container-set1 {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container-set1 .leftside {
+      width: 100%;
+      padding: 1.5rem;
+    }
+
+    .container-set1 img {
+      width: 50%;
+      position: static;
+      margin-top: 2rem;
+    }
+
+    .container-set3 {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container-set3 .card {
+      width: 80%; // Hacemos que las tarjetas se acomoden más estrechas en pantallas más pequeñas
+    }
+  }
+
+  // Para pantallas móviles y muy pequeñas
+  @media (max-width: 768px) {
+    padding-top: 3rem;
+
+    .container-set1 {
+      margin-top: 50px;
+    }
+
+    .container-set1 .leftside {
+      width: 100%;
+      padding: 1rem;
+    }
+
+    .container-set1 img {
+      width: 60%;
+      position: static;
+      margin-top: 2rem;
+    }
+
+    .container-set2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .container-set3 {
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .container-set3 .card {
+      width: 90%; // Tarjetas más pequeñas en móviles
+    }
+
+    .btn-2.pink {
+      align-self: center;
+    }
+  }
+
+  // Para pantallas muy pequeñas (como móviles en modo retrato)
+  @media (max-width: 480px) {
+    padding-top: 2rem;
+
+    .container-set1 .leftside {
+      padding: 1rem;
+    }
+
+    .container-set1 img {
+      width: 70%;
+      position: static;
+      margin-top: 1rem;
+    }
+
+    .container-set2 {
+      margin-top: 2rem;
+    }
+
+    .container-set3 .card {
+      width: 100%; // Tarjetas en una sola columna
+      margin-bottom: 1rem;
     }
   }
 }
