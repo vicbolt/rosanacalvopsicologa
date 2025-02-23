@@ -3,6 +3,7 @@
 .container {
   margin-top: 150px;
   height: auto;
+  overflow-x: hidden;
 
   & .wrap {
     & .container-cards {
