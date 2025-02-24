@@ -11,7 +11,7 @@
     <div class="carousel-container">
         <div class="carousel" [style.transform]="getTransformStyle()">
           <div *ngFor="let slide of slides; let i = index" class="slide">
-              <img src="../../../assets/img/icons/Stars.svg" alt="5 estrellas">
+              <!-- <img src="../../../assets/img/icons/Stars.svg" alt="5 estrellas"> -->
             <div style="display: flex; align-items: baseline;">
                 <h4 style="margin-right: 20px;">{{ slide.client }}, {{ slide.age }} </h4>
                 <p class="caption" style="margin: 0;">({{ slide.motivation }})</p>
