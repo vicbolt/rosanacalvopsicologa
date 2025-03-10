@@ -1,4 +1,5 @@
 // RESET________________________________________________________________________
+@import '@angular/material/prebuilt-themes/indigo-pink.css'; // Example theme
 
 html,
 body,
@@ -450,3 +451,6 @@ width: 90%;
   }
 
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
