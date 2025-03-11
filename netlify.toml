@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build && cp ./_redirects ./dist/browser/_redirects"
+  publish = "dist/browser"
+  environment = { NODE_ENV = "production" }
+
+[build.environment]
+  NODE_ENV = "production"
+
+[[plugins]]
+  package = "@netlify/plugin-gatsby"
