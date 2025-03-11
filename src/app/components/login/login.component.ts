@@ -14,13 +14,13 @@ export class LoginComponent {
   username: string = '';
   password: string = '';
   errorMessage: string = '';
-  private loginUrl = environment.apiUrl;
   isLoading: boolean = false;  // Estado de carga para evitar múltiples clics
 
   constructor(private http: HttpClient, private router: Router) {}
 
   // Método que se llama cuando el formulario es enviado
   onSubmit() {
+    console.log(environment.apiUrl)
     if (!this.username || !this.password) {
       this.errorMessage = 'Por favor, introduce usuario y contraseña.';
       return;
@@ -32,7 +32,7 @@ export class LoginComponent {
 
     // Realizamos la petición POST directamente
     this.http
-      .post<{ token: string }>(this.loginUrl+'/api/login', { username: this.username, password: this.password }, {
+      .post<{ token: string }>(environment.apiUrl+'/api/login', { username: this.username, password: this.password }, {
         headers: { 'Content-Type': 'application/json' },
       })
       .pipe(
