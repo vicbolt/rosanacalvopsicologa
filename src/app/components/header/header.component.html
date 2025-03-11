@@ -57,6 +57,13 @@
       <!-- Menú Móvil -->
       <div class="mobile-menu" [ngClass]="{ active: menuOpen }">
         <a
+        class="textlink"
+        [routerLink]="['/login']"
+        [routerLinkActive]="['active']"
+        (click)="toggleMenu()"
+        >Login XX</a
+      >
+        <a
           class="textlink"
           [routerLink]="['/home']"
           [routerLinkActive]="['active']"
