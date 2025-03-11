@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { Router } from '@angular/router'; 
 import { of } from 'rxjs'; // Importar of para retornar un observable vacío
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent {
   username: string = '';
   password: string = '';
   errorMessage: string = '';
-  private loginUrl = 'http://localhost:3000/api/login';
+  private loginUrl = environment.apiUrl;
   isLoading: boolean = false;  // Estado de carga para evitar múltiples clics
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -31,7 +32,7 @@ export class LoginComponent {
 
     // Realizamos la petición POST directamente
     this.http
-      .post<{ token: string }>(this.loginUrl, { username: this.username, password: this.password }, {
+      .post<{ token: string }>(this.loginUrl+'/api/login', { username: this.username, password: this.password }, {
         headers: { 'Content-Type': 'application/json' },
       })
       .pipe(
