@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build && cp ./_redirects ./dist/browser/_redirects"
-  publish = "dist/browser"
+  command = "npm run build && cp ./_redirects ./dist/rosanaangular/browser/_redirects"
+  publish = "dist/rosanaangular/browser"
   environment = { NODE_ENV = "production" }
 
 [[plugins]]
