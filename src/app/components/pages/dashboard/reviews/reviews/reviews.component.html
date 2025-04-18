@@ -1,9 +1,24 @@
 <div class="reviews-container">
   <!-- Top Menu -->
   <div class="menu">
-    <button (click)="showSection('newReviews')">Reseñas Nuevas</button>
-    <button (click)="showSection('acceptedReviews')">Reseñas Aceptadas</button>
-    <button (click)="showSection('deniedReviews')">Reseñas Denegadas</button>
+    <button 
+      (click)="showSection('newReviews')" 
+      [ngClass]="{ 'active': activeSection === 'newReviews' }"
+    >
+      Reseñas Nuevas
+    </button>
+    <button 
+      (click)="showSection('acceptedReviews')" 
+      [ngClass]="{ 'active': activeSection === 'acceptedReviews' }"
+    >
+      Reseñas Aceptadas
+    </button>
+    <button 
+      (click)="showSection('deniedReviews')" 
+      [ngClass]="{ 'active': activeSection === 'deniedReviews' }"
+    >
+      Reseñas Denegadas
+    </button>
   </div>
 
   <!-- Reseñas Nuevas -->
@@ -11,7 +26,6 @@
     class="reviews-section new-reviews"
     [ngClass]="{ active: activeSection === 'newReviews' }"
   >
-    <h4>Reseñas Nuevas</h4>
     <ul>
       <li *ngFor="let review of newReviews">
         <p class="info">
@@ -33,7 +47,6 @@
     class="reviews-section accepted-reviews"
     [ngClass]="{ active: activeSection === 'acceptedReviews' }"
   >
-    <h4>Reseñas Aceptadas</h4>
     <ul>
       <li *ngFor="let review of acceptedReviews">
         <p class="info">
@@ -54,7 +67,6 @@
     class="reviews-section denied-reviews"
     [ngClass]="{ active: activeSection === 'deniedReviews' }"
   >
-    <h4>Reseñas Denegadas</h4>
     <ul>
       <li *ngFor="let review of deniedReviews">
         <p class="info">

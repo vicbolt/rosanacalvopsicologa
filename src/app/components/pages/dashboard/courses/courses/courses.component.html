@@ -1,0 +1,165 @@
+<div class="courses-container">
+  <button (click)="openModal()" class="add-course-btn">Añadir +</button>
+
+  <ul class="courses-list">
+    <li
+      *ngFor="let course of courses"
+      [ngStyle]="{
+        'border-left': course.vigente
+          ? '7px solid lightgreen'
+          : '7px solid lightcoral'
+      }"
+    >
+      <div class="card-container">
+        <div class="img">
+          <img
+            [src]="'http://localhost:3000/uploads/' + course.imagen"
+            alt="Imagen del curso"
+          />
+        </div>
+
+        <div class="info">
+          <p class="vigente" *ngIf="course.vigente">En curso</p>
+          <p class="pasado" *ngIf="!course.vigente">Vencido</p>
+          <div class="titulo">
+            <p>{{ course.titulo }}</p>
+            <p>
+              {{ course.fechaInicio | date : "dd/MM/yyyy" }} -
+              {{ course.fechaFin | date : "dd/MM/yyyy" }} a las
+              {{ course.hora }}
+            </p>
+          </div>
+          <p>{{ course.lugar }}</p>
+          <p>{{ course.descripcion }}</p>
+        </div>
+      </div>
+      <div class="buttons-container">
+        <button class="borrar" (click)="deleteCourse(course)">Borrar</button>
+        <button
+          *ngIf="course.vigente"
+          class="marcar"
+          (click)="markAsPast(course)"
+        >
+          Marcar como vencido
+        </button>
+      </div>
+    </li>
+  </ul>
+
+  <!-- Modal for adding a new course -->
+  <div class="modal" *ngIf="isModalOpen">
+    <div class="modal-content">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <h3 style="text-align: center; font-weight: 600">Nuevo Curso</h3>
+      <form (submit)="addCourse()">
+        <label for="titulo">Título del Curso:</label>
+        <input
+          type="text"
+          id="titulo"
+          [(ngModel)]="newCourse.titulo"
+          name="titulo"
+          required
+        />
+
+        <label for="fotografia">Imagen:</label>
+
+        <input
+          type="file"
+          id="fotografia"
+          (change)="onFileSelected($event)"
+          name="fotografia"
+          required
+        />
+
+        <label for="descripcion">Descripción:</label>
+        <textarea
+          id="descripcion"
+          [(ngModel)]="newCourse.descripcion"
+          name="descripcion"
+          required
+        ></textarea>
+
+        <label for="lugar">Lugar:</label>
+        <input
+          type="text"
+          id="lugar"
+          [(ngModel)]="newCourse.lugar"
+          name="lugar"
+          required
+        />
+
+        <div style="display: flex; justify-content: space-between">
+          <div style="display: flex; flex-direction: column; width: 40%">
+            <label for="fechaInicio">Fecha de Inicio:</label>
+            <input
+              type="datetime-local"
+              id="fechaInicio"
+              [(ngModel)]="newCourse.fechaInicio"
+              name="fechaInicio"
+              required
+            />
+          </div>
+
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              width: 40%;
+              padding-right: 15px;
+            "
+          >
+            <label for="fechaFin">Fecha de Fin:</label>
+            <input
+              type="datetime-local"
+              id="fechaFin"
+              [(ngModel)]="newCourse.fechaFin"
+              name="fechaFin"
+              required
+            />
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between">
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              width: 40%;
+              padding-right: 15px;
+            "
+          >
+            <label for="hora">Hora:</label>
+            <input
+              type="text"
+              id="hora"
+              [(ngModel)]="newCourse.hora"
+              name="hora"
+              required
+            />
+          </div>
+
+          <div
+            style="
+              width: 40%;
+              padding-right: 15px;
+              display: flex;
+              align-items: center;
+              
+            "
+          >
+            <label for="vigente">Vigente:</label>
+            <input
+            style="width: fit-content;"
+              type="checkbox"
+              id="vigente"
+              [(ngModel)]="newCourse.vigente"
+              name="vigente"
+            />
+          </div>
+        </div>
+
+        <button type="submit">Añadir Curso</button>
+      </form>
+    </div>
+  </div>
+</div>

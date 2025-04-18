@@ -36,6 +36,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ReviewsComponent } from './components/pages/dashboard/reviews/reviews/reviews.component';
+import { CoursesComponent } from './components/pages/dashboard/courses/courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { ReviewsComponent } from './components/pages/dashboard/reviews/reviews/r
     LoginPageComponent,
     DashboardComponent,
     ReviewsComponent,
+    CoursesComponent,
   ],
   imports: [
     BrowserModule,
