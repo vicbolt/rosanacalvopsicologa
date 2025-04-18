@@ -1,7 +1,10 @@
 <section id="testimonyshort">
   <div class="full-container">
     <div class="title-container pink">
-      <img src="../../../assets/img/icons/asterisc-pink.png" alt="Asterisco en color rosa">
+      <img
+        src="../../../assets/img/icons/asterisc-pink.png"
+        alt="Asterisco en color rosa"
+      />
       <div>
         <h4>RESEÑAS</h4>
         <h2>Opiniones de pacientes</h2>
@@ -9,24 +12,84 @@
     </div>
 
     <div class="carousel-container">
-        <div class="carousel" [style.transform]="getTransformStyle()">
-          <div *ngFor="let slide of slides; let i = index" class="slide">
-              <!-- <img src="../../../assets/img/icons/Stars.svg" alt="5 estrellas"> -->
-            <div style="display: flex; align-items: baseline;">
-                <h4 style="margin-right: 20px;">{{ slide.client }}, {{ slide.age }} </h4>
-                <p class="caption" style="margin: 0;">({{ slide.motivation }})</p>
-            </div>
-              <hr class="separator">
-
-            <p>{{ slide.text }}</p>
-
+      <div class="carousel" [style.transform]="getTransformStyle()">
+        <div *ngFor="let slide of slides; let i = index" class="slide">
+          <!-- <img src="../../../assets/img/icons/Stars.svg" alt="5 estrellas"> -->
+          <div style="display: flex; align-items: baseline">
+            <h4 style="margin-right: 20px">
+              {{ slide.nombre }}, {{ slide.edad }}
+            </h4>
+            <p class="caption" style="margin: 0">({{ slide.motivo }})</p>
           </div>
-        </div>
-        <button (click)="showPreviousSlide()" class="prev-btn">⟨</button>
-        <button (click)="showNextSlide()" class="next-btn">⟩</button>
-        <div class="dots">
-          <span *ngFor="let dot of slides; let i = index" (click)="goToSlide(i)" [class.active]="i === currentIndex" class="dot"></span>
+          <hr class="separator" />
+
+          <p>{{ slide.review }}</p>
         </div>
       </div>
+      <button (click)="showPreviousSlide()" class="prev-btn">⟨</button>
+      <button (click)="showNextSlide()" class="next-btn">⟩</button>
+      <div class="dots">
+        <span
+          *ngFor="let dot of slides; let i = index"
+          (click)="goToSlide(i)"
+          [class.active]="i === currentIndex"
+          class="dot"
+        ></span>
+      </div>
+    </div>
+    
+    <!-- New section for submitting a review -->
+    <div class="submit-review">
+      <p>
+        Si conoces a Rosana y su trabajo, y te gustaría dejar una reseña puedes
+        hacerlo clickando <a href="#" (click)="openModal()">aquí</a>.
+      </p>
+    </div>
+
+    <!-- Modal Popup -->
+    <div class="modal" *ngIf="isModalOpen">
+      <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <h3>Dejar una Reseña</h3>
+        <form (submit)="submitReview()">
+          <label for="nombre">Nombre:</label>
+          <input
+            type="text"
+            id="nombre"
+            [(ngModel)]="newReview.nombre"
+            name="nombre"
+            required
+          />
+
+          <label for="edad">Edad:</label>
+          <input
+            type="text"
+            id="edad"
+            [(ngModel)]="newReview.edad"
+            name="edad"
+            required
+          />
+
+          <label for="motivo">Motivo:</label>
+          <input
+            type="text"
+            id="motivo"
+            [(ngModel)]="newReview.motivo"
+            name="motivo"
+            required
+          />
+
+          <label for="review">Reseña:</label>
+          <textarea
+            id="review"
+            [(ngModel)]="newReview.review"
+            name="review"
+            required
+          ></textarea>
+
+          <button type="submit">Enviar Reseña</button>
+        </form>
+      </div>
+    </div>
   </div>
 </section>

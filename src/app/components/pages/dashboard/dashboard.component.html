@@ -7,74 +7,15 @@
       <li>
         <a href="#" class="menu-item" (click)="showSection('courses', $event)">Insertar Cursos y Talleres</a>
       </li>
-      <!-- Espacios para futuras herramientas -->
-      <li>
-        <a href="#" class="menu-item" (click)="showSection('tool3', $event)">Herramienta 3</a>
-      </li>
-      <li>
-        <a href="#" class="menu-item" (click)="showSection('tool4', $event)">Herramienta 4</a>
-      </li>
     </ul>
   </nav>
   
   <div class="dashboard-content">
-    <div *ngIf="activeSection === 'courses'">
-      <h3>Gestión de Cursos y Talleres</h3>
-
-      <div class="main-container">
-        <!-- Crear Nuevo Curso -->
-        <div class="create-course">
-          <h4>Crear Nuevo Curso</h4>
-          <form (submit)="addCourse()">
-            <mat-form-field appearance="fill">
-              <mat-label>Fotografía</mat-label>
-              <input matInput type="file" id="coursePhoto" name="coursePhoto" (change)="onPhotoChange($event)">
-            </mat-form-field>
-
-            <mat-form-field appearance="fill">
-              <mat-label>Título del Curso</mat-label>
-              <input matInput type="text" id="courseTitle" name="courseTitle" [(ngModel)]="newCourse.title">
-            </mat-form-field>
-
-            <mat-form-field appearance="fill">
-              <mat-label>Descripción del Curso</mat-label>
-              <textarea matInput id="courseDescription" name="courseDescription" [(ngModel)]="newCourse.description"></textarea>
-            </mat-form-field>
-
-            <mat-form-field appearance="fill">
-              <mat-label>Localización</mat-label>
-              <input matInput type="text" id="courseLocation" name="courseLocation" [(ngModel)]="newCourse.location">
-            </mat-form-field>
-
-            <mat-form-field appearance="fill">
-              <mat-label>Fecha</mat-label>
-              <input matInput [matDatepicker]="picker" id="courseDate" name="courseDate" [(ngModel)]="newCourse.date">
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-
-            <button mat-raised-button color="primary" type="submit">Añadir Curso</button>
-          </form>
-        </div>
-
-        <!-- Cursos Activos -->
-        <div class="active-courses">
-          <h4>Cursos Activos</h4>
-          <ul>
-            <li *ngFor="let course of activeCourses">
-              <img [src]="course.photo" alt="Foto del curso" width="100" />
-              <h5>{{ course.title }}</h5>
-              <p>{{ course.description }}</p>
-              <p>Localización: {{ course.location }}</p>
-              <p>Fecha: {{ course.date }}</p>
-              <button mat-button (click)="editCourse(course)">Editar</button>
-              <button mat-button (click)="hideCourse(course)">Esconder</button>
-              <button mat-button (click)="deleteCourse(course)">Borrar</button>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div *ngIf="activeSection === 'reviews'">
+      <app-reviews></app-reviews>
     </div>
-    <!-- Aquí puedes insertar contenido adicional para otras secciones -->
+    <div *ngIf="activeSection === 'courses'">
+      <!-- Contenido de cursos -->
+    </div>
   </div>
 </div>

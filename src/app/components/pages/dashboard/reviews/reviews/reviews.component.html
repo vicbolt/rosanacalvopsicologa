@@ -1,0 +1,72 @@
+<div class="reviews-container">
+  <!-- Top Menu -->
+  <div class="menu">
+    <button (click)="showSection('newReviews')">Reseñas Nuevas</button>
+    <button (click)="showSection('acceptedReviews')">Reseñas Aceptadas</button>
+    <button (click)="showSection('deniedReviews')">Reseñas Denegadas</button>
+  </div>
+
+  <!-- Reseñas Nuevas -->
+  <div
+    class="reviews-section new-reviews"
+    [ngClass]="{ active: activeSection === 'newReviews' }"
+  >
+    <h4>Reseñas Nuevas</h4>
+    <ul>
+      <li *ngFor="let review of newReviews">
+        <p class="info">
+          {{ review.nombre }}, {{ review.edad }} años -
+          <span style="font-style: italic">({{ review.motivo }})</span>
+        </p>
+        <p>{{ review.review }}</p>
+
+        <div class="action-btns">
+          <button (click)="acceptReview(review)">Aceptar</button>
+          <button (click)="denyReview(review)">Denegar</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Reseñas Aceptadas -->
+  <div
+    class="reviews-section accepted-reviews"
+    [ngClass]="{ active: activeSection === 'acceptedReviews' }"
+  >
+    <h4>Reseñas Aceptadas</h4>
+    <ul>
+      <li *ngFor="let review of acceptedReviews">
+        <p class="info">
+          {{ review.nombre }}, {{ review.edad }} años -
+          <span style="font-style: italic">({{ review.motivo }})</span>
+        </p>
+        <p>{{ review.review }}</p>
+
+        <div class="action-btns">
+          <button (click)="denyReview(review)">Denegar</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Reseñas Denegadas -->
+  <div
+    class="reviews-section denied-reviews"
+    [ngClass]="{ active: activeSection === 'deniedReviews' }"
+  >
+    <h4>Reseñas Denegadas</h4>
+    <ul>
+      <li *ngFor="let review of deniedReviews">
+        <p class="info">
+          {{ review.nombre }}, {{ review.edad }} años -
+          <span style="font-style: italic">({{ review.motivo }})</span>
+        </p>
+        <p>{{ review.review }}</p>
+
+        <div class="action-btns">
+          <button style="background-color: green;" (click)="acceptReview(review)">Aceptar</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

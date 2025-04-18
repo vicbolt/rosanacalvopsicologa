@@ -20,7 +20,7 @@ export class LoginComponent {
 
   // Método que se llama cuando el formulario es enviado
   onSubmit() {
-    console.log('holaaaaaaa', environment.apiUrl)
+    console.log('holaaaaaaa', environment.apiUrl+'/api/login')
     if (!this.username || !this.password) {
       this.errorMessage = 'Por favor, introduce usuario y contraseña.';
       return;

@@ -35,6 +35,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ReviewsComponent } from './components/pages/dashboard/reviews/reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     EmdrshortComponent,
     LoginPageComponent,
     DashboardComponent,
+    ReviewsComponent,
   ],
   imports: [
     BrowserModule,
