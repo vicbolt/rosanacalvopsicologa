@@ -4,8 +4,9 @@
     <div class="summary-item">
       <img src="../../../assets/img/icons/followers-icon.png" alt="Seguidores Icono" />
       <div>
-        <h3>Seguidores</h3>
-        <p>1,2k</p>
+        <h3>Usuarios activos</h3>
+        <p *ngIf="totalUsers !== null">{{ totalUsers }}</p>
+        <p *ngIf="totalUsers === null">Cargando...</p>
       </div>
     </div>
     <div class="summary-item">
