@@ -37,6 +37,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ReviewsComponent } from './components/pages/dashboard/reviews/reviews/reviews.component';
 import { CoursesComponent } from './components/pages/dashboard/courses/courses/courses.component';
+import { MessagesComponent } from './components/pages/dashboard/messages/messages.component';
+import { DashboardHomeComponent } from './components/pages/dashboard/dashboard-home/dashboard-home.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import { CoursesComponent } from './components/pages/dashboard/courses/courses/c
     DashboardComponent,
     ReviewsComponent,
     CoursesComponent,
+    MessagesComponent,
+    DashboardHomeComponent,
   ],
   imports: [
     BrowserModule,

@@ -13,9 +13,11 @@ interface Course {
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
+
 export class DashboardComponent {
   activeSection: string = '';
-  activeCourses: Course[] = []; // Array to hold active courses
+  activeCourses: Course[] = [];
+
   newCourse: Course = {
     photo: '',
     title: '',
@@ -25,7 +27,7 @@ export class DashboardComponent {
   };
 
   showSection(section: string, event: MouseEvent) {
-    event.preventDefault(); // Prevent the default anchor behavior
+    event.preventDefault();
     this.activeSection = section;
   }
 

@@ -37,7 +37,7 @@
         ></span>
       </div>
     </div>
-    
+
     <!-- New section for submitting a review -->
     <div class="submit-review">
       <p>
@@ -50,45 +50,58 @@
     <div class="modal" *ngIf="isModalOpen">
       <div class="modal-content">
         <span class="close" (click)="closeModal()">&times;</span>
-        <h3>Dejar una Reseña</h3>
-        <form (submit)="submitReview()">
-          <label for="nombre">Nombre:</label>
-          <input
-            type="text"
-            id="nombre"
-            [(ngModel)]="newReview.nombre"
-            name="nombre"
-            required
-          />
+        <ng-container *ngIf="!isSubmitted; else thankYouMessage">
+          <h3 style="margin-bottom: 15px; font-weight: 600;">Dejar una reseña</h3>
+          <form (submit)="submitReview()">
+            <input
+              type="text"
+              id="nombre"
+              [(ngModel)]="newReview.nombre"
+              name="nombre"
+              placeholder="Nombre"
+              required
+            />
 
-          <label for="edad">Edad:</label>
-          <input
-            type="text"
-            id="edad"
-            [(ngModel)]="newReview.edad"
-            name="edad"
-            required
-          />
+            <input
+              type="text"
+              id="edad"
+              [(ngModel)]="newReview.edad"
+              name="edad"
+              placeholder="Edad"
+              inputmode="numeric" 
+              pattern="\d{1,2}" 
+              maxlength="2" 
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+              required
+            />
 
-          <label for="motivo">Motivo:</label>
-          <input
-            type="text"
-            id="motivo"
-            [(ngModel)]="newReview.motivo"
-            name="motivo"
-            required
-          />
+            <input
+              type="text"
+              id="motivo"
+              [(ngModel)]="newReview.motivo"
+              name="motivo"
+              placeholder="Motivo de la visita. Ej: 'Problemas personales, ansiedad...."
+              required
+            />
 
-          <label for="review">Reseña:</label>
-          <textarea
-            id="review"
-            [(ngModel)]="newReview.review"
-            name="review"
-            required
-          ></textarea>
+            <textarea
+              id="review"
+              [(ngModel)]="newReview.review"
+              name="review"
+              placeholder="Escribe aqui tu reseña"
+              rows="8"
+              cols="50"
+              required
+            ></textarea>
 
-          <button type="submit">Enviar Reseña</button>
-        </form>
+            <button class="btn-1" type="submit">Enviar Reseña</button>
+          </form>
+        </ng-container>
+        <ng-template #thankYouMessage>
+          <h3>¡Tu reseña ha sido enviada!</h3>
+          <p>Gracias, tu opinión es muy importante.</p>
+          <button class="btn-1" (click)="closeModal()">Cerrar</button>
+        </ng-template>
       </div>
     </div>
   </div>

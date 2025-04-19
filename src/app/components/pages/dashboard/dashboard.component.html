@@ -1,22 +1,41 @@
-<div class="dashboard-container" style="margin-top: 60px">
-  <nav class="dashboard-menu">
+<div class="dashboard-container" >
+  <nav class="dashboard-menu" >
     <ul>
+      <li>
+        <a href="#" class="menu-item" (click)="showSection('home', $event)">Home</a>
+      </li>
       <li>
         <a href="#" class="menu-item" (click)="showSection('reviews', $event)">Validación de Reseñas</a>
       </li>
       <li>
-        <a href="#" class="menu-item" (click)="showSection('courses', $event)">Insertar Cursos y Talleres</a>
+        <a href="#" class="menu-item" (click)="showSection('courses', $event)">Cursos y Talleres</a>
+      </li>
+
+      <li>
+        <a href="#" class="menu-item" (click)="showSection('messages', $event)">Mensajes</a>
+      </li>
+      <li>
+        <a href="#" class="menu-item" (click)="showSection('specializations', $event)">Especializaciones</a>
       </li>
     </ul>
   </nav>
   
   <div class="dashboard-content">
+    
+    <div *ngIf="activeSection === 'home'">
+      <app-dashboard-home></app-dashboard-home>
+    </div>
+
     <div *ngIf="activeSection === 'reviews'">
       <app-reviews></app-reviews>
     </div>
 
     <div *ngIf="activeSection === 'courses'">
       <app-courses></app-courses>
+    </div>
+
+    <div *ngIf="activeSection === 'messages'">
+      <app-messages></app-messages>
     </div>
   </div>
 </div>

@@ -12,6 +12,8 @@ export class TestimonyshortComponent implements OnInit {
   slides: any[] = [];
 
   isModalOpen: boolean = false;
+  isSubmitted: boolean = false;
+
   newReview: {
     nombre: string;
     edad: string;
@@ -82,16 +84,20 @@ export class TestimonyshortComponent implements OnInit {
 
   openModal(): void {
     this.isModalOpen = true;
+    this.isSubmitted = false;
   }
 
   closeModal(): void {
     this.isModalOpen = false;
   }
 
+
   submitReview(): void {
+    
     const reviewToSubmit = {
       ...this.newReview,
-      revisado: false,
+      revisada: false,
+      aceptada: false,
     };
 
     this.http
@@ -99,10 +105,7 @@ export class TestimonyshortComponent implements OnInit {
       .subscribe({
         next: () => {
           console.log('Review submitted:', reviewToSubmit);
-          this.closeModal();
-          alert(
-            'Gracias, su reseña ha sido enviada y está a la espera de ser aceptada por el administrador.'
-          );
+          this.isSubmitted = true;
         },
         error: (error) => {
           console.error('Error submitting review:', error);
