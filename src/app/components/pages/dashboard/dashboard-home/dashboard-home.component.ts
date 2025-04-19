@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AnalyticsService } from '../../../../services/analytics.service';
+
 
 @Component({
   selector: 'app-dashboard-home',
@@ -10,16 +10,7 @@ import { AnalyticsService } from '../../../../services/analytics.service';
 export class DashboardHomeComponent {
   totalUsers: number | null = null;
 
-  constructor(private analyticsService: AnalyticsService) {}
 
-  ngOnInit() {
-    this.analyticsService.getTotalUsers().subscribe({
-      next: (data) => {
-        this.totalUsers = Number(data.total);
-      },
-      error: (err) => {
-        console.error('Error fetching analytics:', err);
-      }
-    });
-  }
+
+
 }
