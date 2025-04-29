@@ -39,6 +39,10 @@
           <button (click)="denyReview(review)">Denegar</button>
         </div>
       </li>
+
+      <div *ngIf="newReviews.length === 0" class="no-reviews-message">
+        <p class="mensajeInfo">No tienes reseñas pendientes de aprobar.</p>
+      </div>
     </ul>
   </div>
 
@@ -59,6 +63,9 @@
           <button (click)="denyReview(review)">Denegar</button>
         </div>
       </li>
+      <div *ngIf="acceptedReviews.length === 0" class="no-reviews-message">
+        <p class="mensajeInfo">No tienes reseñas pendientes de aprobar.</p>
+      </div>
     </ul>
   </div>
 
@@ -76,9 +83,13 @@
         <p>{{ review.review }}</p>
 
         <div class="action-btns">
-          <button style="background-color: green;" (click)="acceptReview(review)">Aceptar</button>
+          <button (click)="acceptReview(review)">Aceptar</button>
+          <button style="display: none;"></button>
         </div>
       </li>
+      <div *ngIf="deniedReviews.length === 0" class="no-reviews-message">
+        <p class="mensajeInfo">No tienes reseñas pendientes de aprobar.</p>
+      </div>
     </ul>
   </div>
 </div>

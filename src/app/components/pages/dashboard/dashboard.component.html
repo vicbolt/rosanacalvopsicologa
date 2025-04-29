@@ -2,20 +2,22 @@
   <nav class="dashboard-menu" >
     <ul>
       <li>
-        <a href="#" class="menu-item" (click)="showSection('home', $event)">Home</a>
+        <a href="#" class="menu-item" [ngClass]="{'active': activeSection === 'home'}" (click)="showSection('home', $event)">🏠 Home</a>
       </li>
       <li>
-        <a href="#" class="menu-item" (click)="showSection('reviews', $event)">Validación de Reseñas</a>
+        <a href="#" class="menu-item" [ngClass]="{'active': activeSection === 'messages'}" (click)="showSection('messages', $event)">📨 Mensajes</a>
       </li>
       <li>
-        <a href="#" class="menu-item" (click)="showSection('courses', $event)">Cursos y Talleres</a>
+        <a href="#" class="menu-item" [ngClass]="{'active': activeSection === 'reviews'}" (click)="showSection('reviews', $event)">
+          ⭐️ Validación de Reseñas
+          <span *ngIf="newReviews.length > 0" class="badge">{{ newReviews.length }}</span>
+        </a>
       </li>
-
       <li>
-        <a href="#" class="menu-item" (click)="showSection('messages', $event)">Mensajes</a>
+        <a href="#" class="menu-item" [ngClass]="{'active': activeSection === 'courses'}" (click)="showSection('courses', $event)">📙 Cursos y Talleres</a>
       </li>
       <li>
-        <a href="#" class="menu-item" (click)="showSection('specializations', $event)">Especializaciones</a>
+        <a href="#" class="menu-item" [ngClass]="{'active': activeSection === 'specializations'}" (click)="showSection('specializations', $event)">🎖️ Especializaciones</a>
       </li>
     </ul>
   </nav>

@@ -32,7 +32,7 @@ export class LoginComponent {
 
     // Realizamos la petición POST directamente
     this.http
-      .post<{ token: string }>(environment.apiUrl+'/api/login', { username: this.username, password: this.password }, {
+      .post<{ token: string; user: { name: string }  }>(environment.apiUrl+'/api/login', { username: this.username, password: this.password }, {
         headers: { 'Content-Type': 'application/json' },
       })
       .pipe(
@@ -46,9 +46,9 @@ export class LoginComponent {
       )
       .subscribe({
         next: (response) => {
-          if (response?.token) {
+          if (response?.token && response?.user?.name) {
             localStorage.setItem('authToken', response.token);
-            console.log('Token recibido:', response.token);
+            localStorage.setItem('userName', response.user.name);
             // Redirigir al usuario a la página de inicio
             this.router.navigate(['/protected/dashboard']); // Redirection to home page
           } else {

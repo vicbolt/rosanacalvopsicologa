@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../../../../environments/environment';
+import { DashboardService } from '../../dashboard-service.service';
 
 interface Review {
   _id: string;
@@ -23,7 +24,12 @@ export class ReviewsComponent implements OnInit {
 
   activeSection: string = 'newReviews';
 
-  constructor(private http: HttpClient) {}
+  @Output() newReviewsCount = new EventEmitter<number>();
+
+  constructor(
+    private http: HttpClient,
+    private dashboardService: DashboardService
+  ) {}
 
   ngOnInit(): void {
     this.fetchNoRevisado();
@@ -33,21 +39,10 @@ export class ReviewsComponent implements OnInit {
 
   //RESEÑAS NUEVAS
   fetchNoRevisado(): void {
-    this.http
-      .get<{ reviews: Review[] }>(`${environment.apiUrl}/api/getNoRevisado`)
-      .subscribe({
-        next: (data) => {
-          if (data && Array.isArray(data.reviews)) {
-            this.newReviews = data.reviews; // Access the reviews array within the response object
-            console.log('Fetched no-reviewed reviews:', this.newReviews);
-          } else {
-            console.error('Unexpected response format:', data);
-          }
-        },
-        error: (error) => {
-          console.error('Error fetching no-reviewed reviews:', error);
-        },
-      });
+    this.dashboardService.fetchNoRevisado();
+    this.dashboardService.newReviews$.subscribe((reviews) => {
+      this.newReviews = reviews;
+    });
   }
 
   //RESEÑAS ACEPTADAS
@@ -95,36 +90,39 @@ export class ReviewsComponent implements OnInit {
 
   acceptReview(review: Review) {
     const updatedReview = { id: review._id, aceptada: true, revisada: true }; // Use _id
-    this.http.post(`${environment.apiUrl}/api/updateReviewStatus`, updatedReview).subscribe({
-      next: () => {
-        this.acceptedReviews.push(review);
-        this.newReviews = this.newReviews.filter((r) => r !== review);
-        console.log('Review accepted:', review);
-      this.fetchAceptada();
-      this.fetchNoAceptada();
-
-
-      },
-      error: (error) => {
-        console.error('Error updating review status:', error);
-      }
-    });
+    this.http
+      .post(`${environment.apiUrl}/api/updateReviewStatus`, updatedReview)
+      .subscribe({
+        next: () => {
+          this.acceptedReviews.push(review);
+          this.newReviews = this.newReviews.filter((r) => r !== review);
+          console.log('Review accepted:', review);
+          this.fetchAceptada();
+          this.fetchNoAceptada();
+          this.fetchNoRevisado();
+        },
+        error: (error) => {
+          console.error('Error updating review status:', error);
+        },
+      });
   }
 
   denyReview(review: Review) {
     const updatedReview = { id: review._id, aceptada: false, revisada: true };
-    this.http.post(`${environment.apiUrl}/api/updateReviewStatus`, updatedReview).subscribe({
-      next: () => {
-        this.deniedReviews.push(review);
-        this.newReviews = this.newReviews.filter((r) => r !== review);
-        console.log('Review denied:', review);
-        this.fetchNoAceptada();
-      this.fetchAceptada();
-
-      },
-      error: (error) => {
-        console.error('Error updating review status:', error);
-      }
-    });
+    this.http
+      .post(`${environment.apiUrl}/api/updateReviewStatus`, updatedReview)
+      .subscribe({
+        next: () => {
+          this.deniedReviews.push(review);
+          this.newReviews = this.newReviews.filter((r) => r !== review);
+          console.log('Review denied:', review);
+          this.fetchNoAceptada();
+          this.fetchAceptada();
+          this.fetchNoRevisado();
+        },
+        error: (error) => {
+          console.error('Error updating review status:', error);
+        },
+      });
   }
 }

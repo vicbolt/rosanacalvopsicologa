@@ -1,91 +1,98 @@
-.add-course-btn {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.courses-container {
+  background: #f0f4f8;
+  padding: 50px;
+  min-height: 80vh;
 
-  &:hover {
-    background-color: #0056b3;
-  }
-}
 
-.courses-list {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 20px;
-
-  li {
-    background-color: white;
-    margin-bottom: 10px;
+  .add-course-btn {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    border-radius: 20px;;
+    cursor: pointer;
+    transition: background-color 0.3s;
 
-    & .card-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
 
-      & .img{
-        width: 300px;
-        margin-right: 20px;
+  .courses-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
 
-        & img{
-          width: 100%;
-          height: 100%;
-          border-radius: 20px;
+    li {
+      background-color: white;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      border-radius: 20px;
+
+      & .card-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .img {
+          width: 300px;
+          margin-right: 20px;
+
+          & img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+          }
         }
-      }
 
-      & .info{
-        width: 100%;
+        & .info {
+          width: 100%;
 
-        & .vigente{
+          & .vigente {
             display: flex;
             justify-content: flex-end;
             color: green;
-        }
+          }
 
-        & .pasado{
+          & .pasado {
             display: flex;
             justify-content: flex-end;
             color: lightcoral;
-        }
+          }
 
-        & .titulo{
+          & .titulo {
             display: flex;
             justify-content: space-between;
+          }
         }
       }
-    }
 
-    & .buttons-container {
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
+      & .buttons-container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
 
-      & button{
-        margin-right: 10px;
-        cursor: pointer;
-        border: none;
-        padding: 6px 12px;
-        border-radius: 20px;
-        box-sizing: border-box;
+        & button {
+          margin-right: 10px;
+          cursor: pointer;
+          border: none;
+          padding: 6px 12px;
+          border-radius: 20px;
+          box-sizing: border-box;
 
-        &.borrar{
+          &.borrar {
             background-color: lightcoral;
             color: white;
-        }
+          }
 
-        &.marcar{
+          &.marcar {
             background-color: white;
             color: lightcoral;
             border: 2px solid lightcoral;
             box-sizing: border-box;
+          }
         }
       }
     }
@@ -119,7 +126,7 @@
 
     input,
     textarea {
-        max-width: 95%;
+      max-width: 95%;
       margin-bottom: 15px;
       margin-top: 7px;
       padding: 10px;

@@ -3,7 +3,7 @@
 
     <ul>
       <li *ngFor="let msg of messages">
-        <p class="info">{{ msg.name }} | {{ msg.email }}</p>
+        <p class="info">{{ msg.name }} | {{ msg.email }} | {{msg.date | date:'dd/MM/yy - HH:mm'}}</p>
         <p>Preferencia de comunicacion: <span style="font-weight: 600">{{ msg.comPreference }}</span> </p>
         <p>Teléfono: <span style="font-weight: 600">{{ msg.phone }}</span> </p>
         <p>Hora de preferencia: <span style="font-weight: 600"> {{ msg.time }} </span></p>

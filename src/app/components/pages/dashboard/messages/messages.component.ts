@@ -9,6 +9,7 @@ interface Mensaje {
   time: string;
   phone: string;
   msg: string;
+  date: string;
 }
 
 @Component({  // Ensure the decorator is applied to the class
@@ -29,7 +30,7 @@ export class MessagesComponent implements OnInit {
     this.http.get<{ status: string; mensajes: Mensaje[] }>(`${environment.apiUrl}/api/getMsg`).subscribe({
       next: (data) => {
         if (data && Array.isArray(data.mensajes)) {
-          this.messages = data.mensajes; // Access the mensajes array within the response object
+          this.messages = data.mensajes.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
           console.log('Fetched messages:', this.messages);
         } else {
           console.error('Unexpected response format:', data);

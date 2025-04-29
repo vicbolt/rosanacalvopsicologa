@@ -1,44 +1,45 @@
-<div class="dashboard-home">
-  <h2>Resultados influenciador</h2>
-  <div class="summary-container">
-    <div class="summary-item">
-      <img src="../../../assets/img/icons/followers-icon.png" alt="Seguidores Icono" />
-      <div>
-        <h3>Usuarios activos</h3>
-        <p *ngIf="totalUsers !== null">{{ totalUsers }}</p>
-        <p *ngIf="totalUsers === null">Cargando...</p>
-      </div>
-    </div>
-    <div class="summary-item">
-      <img src="../../../assets/img/icons/reach-icon.png" alt="Alcance Icono" />
-      <div>
-        <h3>Alcance</h3>
-        <p>1234</p>
-      </div>
-    </div>
-    <div class="summary-item">
-      <img src="../../../assets/img/icons/interactions-icon.png" alt="Interacciones Icono" />
-      <div>
-        <h3>Interacciones</h3>
-        <p>1234</p>
-      </div>
-    </div>
-  </div>
+<div class="panel">
+  <header class="panel-header">
+    <h1>{{ greeting }}, <span class="highlight">{{ userName }}</span></h1>
+  </header>
 
-  <div class="profile-container">
-    <div class="profile-info">
-      <img src="../../../assets/img/profile-picture.png" alt="Profile Picture" class="profile-picture" />
-      <h3>Rosana Calvo</h3>
-      <p>Psicologa especializada en EMDR</p>
+  <div class="panel-grid">
+    <div class="card date-card">
+      <p> 🗓️ Hoy es {{ todayDate }}</p>
+      <hr>
+      <span *ngIf="efemeride" class="highlight italic">{{ efemeride }}</span>
     </div>
-    <div class="chart-container">
-      <h3>Indicadores generales</h3>
-      <img src="../../../assets/img/chart.png" alt="Indicadores generales" class="chart-image" />
-    </div>
-  </div>
 
-  <div class="recommendations">
-    <h3>Recomendaciones</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet nisl suscipit adipiscing. In fermentum posuere urna nec tincidunt praesent semper. Habitant morbi tristique senectus et netus et malesuada fames. Cursus mattis molestie a iaculis at erat pellentesque.</p>
+
+    <div class="card quote-card">
+      <p>✒️ Frase del día:</p>
+      <hr>
+
+      <span class="italic quote">{{ dailyQuote }}</span>
+    </div>
+
+    <div class="card mood-card">
+      <p>¿Cómo te sientes hoy?</p>
+      <hr>
+
+      <div class="emoji-list">
+        <button (click)="setMood('😊')">😊</button>
+        <button (click)="setMood('😐')">😐</button>
+        <button (click)="setMood('😔')">😔</button>
+      </div>
+      <p *ngIf="mood" class="selection">Has elegido: {{ mood }}</p>
+    </div>
+
+
+
+    <div class="card resource-card">
+      <p> 🧘🏻 Respira 1 minuto</p>
+      <hr>
+
+      <audio controls class="audio-player">
+        <source src="../../../../../assets/audios/Meditacion1min.mp3" type="audio/mpeg" />
+        Tu navegador no soporta audio.
+      </audio>
+    </div>
   </div>
 </div>

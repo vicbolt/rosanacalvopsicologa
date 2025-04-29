@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DashboardService } from './dashboard-service.service';
 
 interface Course {
   photo: string;
@@ -15,8 +16,9 @@ interface Course {
 })
 
 export class DashboardComponent {
-  activeSection: string = '';
+activeSection: string = 'home';
   activeCourses: Course[] = [];
+  newReviews: any[] = [];
 
   newCourse: Course = {
     photo: '',
@@ -26,10 +28,21 @@ export class DashboardComponent {
     date: ''
   };
 
+  constructor(private dashboardService: DashboardService) {}
+  
+  ngOnInit(): void {
+    this.dashboardService.fetchNoRevisado();
+    this.dashboardService.newReviews$.subscribe(reviews => {
+      this.newReviews = reviews;
+    });
+  };
+
+
+
   showSection(section: string, event: MouseEvent) {
     event.preventDefault();
     this.activeSection = section;
-  }
+  };
 
   onPhotoChange(event: any) {
     const file = event.target.files[0];
